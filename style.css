@@ -1,56 +1,212 @@
-body {
-    background: #fff;
-    color: #000;
-    margin: 0;
+@import url("https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&family=Nunito:ital,wght@0,200..1000;1,200..1000&display=swap");
 
+/* Themes  */
+:root {
+	--bg: #ffffff;
+	--text: #03045e; 
+	--muted: #6b7280;
+	--border: #90e0ef;
+
+	--primary-darkest: #03045e; 
+	--primary-darker: #023e8a;
+	--primary-dark: #0077b6;
+	--primary: #0096c7;
+	--primary-light: #00b4d8;
+	--primary-lighter: #48cae4;
+	--primary-lightest: #90e0ef;
+
+	/* Background Accent */
+	--surface: #f8fbfd; /* subtle background panels */
+
+	/* Contrast */
+	--primary-contrast: #ffffff;
+
+	/* UI */
+	--radius: 0.35rem;
+	--focus: 2px solid var(--primary);
 }
 
-.login-container {
-    display: flex;
-    height: 100dvh;
-    width: 100%;
-    align-items: center;
-    justify-content: center;
+@media (prefers-color-scheme: dark) {
+	:root {
+		/* Base */
+		--bg: #0b0f16; /* dark background */
+		--text: #caf0f8; /* light aqua text */
+		--muted: #9ca3af;
+		--border: #1f2937;
 
+		/* Brand Colors (reversed for dark mode) */
+		--primary-darkest: #90e0ef;
+		--primary-darker: #48cae4;
+		--primary-dark: #00b4d8;
+		--primary: #0096c7; /* main accent stays consistent */
+		--primary-light: #0077b6;
+		--primary-lighter: #023e8a;
+		--primary-lightest: #03045e;
+
+		/* Background Accent */
+		--surface: #111827; /* card/panel backgrounds */
+
+		/* Contrast */
+		--primary-contrast: #0b0f16;
+	}
+}
+/* Themes  */
+
+/* Global styles Start*/
+* {
+	box-sizing: border-box;
+}
+body {
+	background: var(--bg);
+	color: var(--text);
+	font-family: "Nunito", sans-serif;
+	font-size: 16px;
+	margin: 0;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+	color: var(--text);
+	font-weight: 700;
+	font-family: "Lato", sans-serif;
+	line-height: 1.2;
+	margin: 0 0 0.75rem;
+}
+h1 {
+	font-size: clamp(2rem, 4vw + 1rem, 3rem);
+}
+h2 {
+	font-size: clamp(1.5rem, 3vw + 0.5rem, 2.25rem);
+}
+h3 {
+	font-size: clamp(1.25rem, 2vw + 0.5rem, 1.75rem);
+}
+h4 {
+	font-size: 1.125rem;
+}
+h5 {
+	font-size: 1rem;
+}
+h6 {
+	font-size: 0.875rem;
+}
+button {
+	display: inline-flex;
+	align-items: center;
+	justify-content: center;
+	padding: 0.8em 2em;
+	border: none;
+	border-radius: var(--radius);
+	cursor: pointer;
+	background: var(--primary);
+	color: var(--primary-contrast);
+	font-weight: 600;
+}
+input,
+textarea {
+	width: 100%;
+	padding: 0.65rem 0.8rem;
+	border: 1px solid var(--border);
+	border-radius: var(--radius);
+	background: transparent;
+	color: var(--text);
+	font: inherit;
+	line-height: 1.4;
+	-webkit-appearance: none;
+	appearance: none;
+}
+
+input::placeholder,
+textarea::placeholder {
+	color: var(--muted);
+	opacity: 0.9;
+}
+
+input:focus-visible,
+textarea:focus-visible {
+	border-color: var(--primary);
+}
+input:disabled,
+textarea:disabled {
+	background: rgba(127, 127, 127, 0.06);
+	cursor: not-allowed;
+}
+textarea {
+	min-height: 140px;
+	resize: vertical;
+}
+
+input[type="file"] {
+	border: none;
+	padding: 0;
+}
+input[type="file"]::file-selector-button {
+	margin-right: 0.75rem;
+	padding: 0.55rem 0.9rem;
+	border: 1px solid var(--border);
+	border-radius: var(--radius);
+	background: transparent;
+	color: var(--text);
+	cursor: pointer;
+}
+/* Global styles End*/
+
+.login-container {
+	display: flex;
+	height: 100dvh;
+	width: 100%;
+	align-items: center;
+	justify-content: center;
+    background: var(--text);
 }
 
 .login-container .box {
-    background: #d1d1d1;
-    width: 20dvw;
-    height: 20dvh;
-    border-radius: 0.5em;
-    display: grid;
-    place-items: center;
-    text-align: center;
+	background: var(--text);
+	width: 20dvw;
+	height: 20dvh;
+	border-radius: var(--radius);
+	display: grid;
+	place-items: center;
+	text-align: center;
 }
 
-.btn-style {
-    padding: 0.8em 2em;
-    background-color: #0e55b1;
-    color: #fff;
-    border: none;
-    border-radius: 0.2em;
-    cursor: pointer;
-}
+/* .btn-style {
+	padding: 0.8em 2em;
+	background-color: #0e55b1;
+	color: #fff;
+	border: none;
+	border-radius: 0.2em;
+	cursor: pointer;
+} */
 
-.container {
-    display: grid;
-    grid-template-columns: 240px 1fr;
-    height: 100dvh;
-    /* padding: 2em; */
-}
+/* .container {
+	display: grid;
+	grid-template-columns: 240px 1fr;
+	height: 100dvh;
+	padding: 2em;
+} */
 
-.sidebar {
-    background: #d1d1d1;
-    height: 100%;
-}
+/* .sidebar {
+	background: #d1d1d1;
+	height: 100%;
+} */
 
-.main {
-    display: grid;
-    grid-template-rows: 60px auto;
-    padding: 1rem;
-}
+/* .main {
+	display: grid;
+	grid-template-rows: 60px auto;
+	padding: 1rem;
+} */
 
-.topbar {
-    display: flex;
-}
+/* .topbar {
+	display: flex;
+} */
+
+/* Chris styles  */
+
+/* Fransis  styles  */
+
+/* Tosin styles  */
