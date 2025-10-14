@@ -1,0 +1,56 @@
+body {
+    background: #fff;
+    color: #000;
+    margin: 0;
+
+}
+
+.login-container {
+    display: flex;
+    height: 100dvh;
+    width: 100%;
+    align-items: center;
+    justify-content: center;
+
+}
+
+.login-container .box {
+    background: #d1d1d1;
+    width: 20dvw;
+    height: 20dvh;
+    border-radius: 0.5em;
+    display: grid;
+    place-items: center;
+    text-align: center;
+}
+
+.btn-style {
+    padding: 0.8em 2em;
+    background-color: #0e55b1;
+    color: #fff;
+    border: none;
+    border-radius: 0.2em;
+    cursor: pointer;
+}
+
+.container {
+    display: grid;
+    grid-template-columns: 240px 1fr;
+    height: 100dvh;
+    /* padding: 2em; */
+}
+
+.sidebar {
+    background: #d1d1d1;
+    height: 100%;
+}
+
+.main {
+    display: grid;
+    grid-template-rows: 60px auto;
+    padding: 1rem;
+}
+
+.topbar {
+    display: flex;
+}
