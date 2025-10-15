@@ -65,7 +65,9 @@ body {
 	font-size: 16px;
 	margin: 0;
 }
-
+a {
+    text-decoration: none;
+}
 h1,
 h2,
 h3,
@@ -216,8 +218,11 @@ table.table-container a{
 	gap: 0.6em;
 	color: var(--text-secondary);
 }
+.sidebar nav ul li a {
+    color: var(--text-secondary);
+}
 .sidebar nav ul li:hover,
-.sidebar nav ul li.active {
+.sidebar nav ul li.active a {
 	color: var(--text-main);
 }
 .sidebar nav ul li.active {
