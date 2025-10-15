@@ -1,56 +1,89 @@
 <!DOCTYPE html>
 <html lang="en">
 
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Crossfire NCR</title>
-  <link rel="stylesheet" href="style.css">
-</head>
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Crossfire NCR</title>
+    <link rel="stylesheet" href="global.css">
+    <link rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.css">
 
-<body>
-  <!-- Layout  -->
-  <div class="container">
+  </head>
 
-    <!-- sidebar  -->
-    <aside class="sidebar">
-      <div class="logo">Logo</div>
-      <nav>
-        <ul>
-          <li>Home/Dashboard</li>
-          <li>All NCRs</li>
-          <li>Create NCR</li>
-          <li>Search NCR</li>
-          <li>QA Panel</li>
-          <li>Engineering Panel</li>
-          <li>Operations Panel</li>
-          <li>Admin Tools</li>
-          <li>Settings</li>
-        </ul>
-      </nav>
-    </aside>
+  <body>
+    <!-- Layout  -->
+    <div class="container">
 
-    <!-- main  -->
-    <main class="main">
-      <header>
-        
-        <div class="user-info">
-            <p>John Doe</p>
-            <p>QM Manager</p>
+      <!-- sidebar  -->
+      <aside class="sidebar padding">
+        <div>
+          <div class>
+            <div class="logo"><h1>CrossFire</h1></div>
+          </div>
+          <hr />
+          <nav>
+            <ul>
+              <li class="active"><i
+                  class="bi bi-grid"></i><span>Dashboard</span></li>
+              <li><i class="bi bi-bar-chart"></i><span>All NCRs</span></li>
+              <li><i class="bi bi-gear"></i><span>Settings</span></li>
+              <hr />
+              <li><i class="bi bi-star"></i><span>QA Panel</span></li>
+              <li><i class="bi bi-star"></i><span>Engineering Panel</span></li>
+              <li><i class="bi bi-star"></i><span>Operations Panel</span></li>
+            </ul>
+          </nav>
         </div>
-        <a href="/index.html"><button class="btn-style">Logout</button></a>
-      </header>
-      <section>
-        <div class="kpi">12 Total NCR</div>
-        <div class="kpi">22 Open NCR</div>
-        <div class="kpi"></div>
-        <div class="kpi"></div>
-        <div class="kpi"></div>
-      </section>
-    </main>
-  </div>
-  <h1></h1>
-  <p></p>
-</body>
+
+        <div class="theme-toggle padding">
+          <div class="mode">
+            <div>
+              <i class="bi bi-moon"></i>
+              <span id="theme-text"></span>
+            </div>
+            <div>
+              <label class="switch ">
+                <input type="checkbox" id="theme-switch">
+                <span class="slider"></span>
+              </label>
+            </div>
+          </div>
+        </div>
+      </aside>
+
+      <!-- main  -->
+      <main class="main">
+        <header class="padding">
+          <div class="flex mobile">
+            <div class="hamburger-menu"><i class="bi bi-list"></i></div>
+            <div class="logo">CrossFire</div>
+          </div>
+
+          <div class="grid-end">
+            <div class="flex">
+              <div class="notification-btn"><i class="bi bi-bell"></i></div>
+              <div class="user-info desktop">
+                <span>John Doe</span>
+              </div>
+              <div class="avatar-btn"><span>a</span></d>
+            </div>
+
+            <!-- <a href="/index.html"><button class="btn-style">Logout</button></a> -->
+          </div>
+        </header>
+
+        <section id="main-section" class="padding">
+          <div class="kpi">12 Total NCR</div>
+          <div class="kpi">22 Open NCR</div>
+          <div class="kpi"></div>
+          <div class="kpi"></div>
+          <div class="kpi"></div>
+        </section>
+      </main>
+    </div>
+
+    <script src="/script/main.js"></script>
+  </body>
 
 </html>
