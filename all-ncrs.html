@@ -1,132 +1,163 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>All NCR - CrossFire</title>
-    <link rel="stylesheet" href="style.css">
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.css">
-</head>
-<body>
-    <div class="container">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>All NCR - CrossFire</title>
+        <link rel="stylesheet" href="style.css">
+        <link rel="stylesheet"
+            href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.css">
+    </head>
+    <body>
+        <div class="container">
 
-        <!-- Sidebar -->
-        <aside class="sidebar padding">
-            <div>
-                <div class="logo"><h1>CrossFire</h1></div>
-                <hr />
-                <nav>
-                    <ul>
-                        <li><i class="bi bi-grid"></i><a href="home.html">Dashboard</a></li>
-                        <li><i class="bi bi-bar-chart"></i><a href="all-ncrs.html" class="active">All NCRs</a></li>
-                        <li><i class="bi bi-pencil"></i><a href="edit-ncr.html">Edit NCR</a></li>
-                        <li><i class="bi bi-gear"></i><a href="/">Settings</a></li>
-                        <hr />
-                        <li><i class="bi bi-star"></i><a href="/">QA Panel</a></li>
-                        <li><i class="bi bi-star"></i><a href="/">Engineering Panel</a></li>
-                        <li><i class="bi bi-star"></i><a href="/">Operations Panel</a></li>
-                    </ul>
-                </nav>
-            </div>
-            <div class="theme-toggle padding">
-                <div class="mode">
-                    <div>
-                        <i class="bi bi-moon"></i>
-                        <span id="theme-text"></span>
-                    </div>
-                    <div>
-                        <label class="switch">
-                            <input type="checkbox" id="theme-switch">
-                            <span class="slider"></span>
-                        </label>
-                    </div>
+            <!-- Sidebar -->
+            <aside class="sidebar padding">
+                <div>
+                    <div class="logo"><h1>CrossFire</h1></div>
+                    <hr />
+                    <nav>
+                        <ul>
+                            <li><i class="bi bi-grid"></i><a
+                                    href="home.html">Dashboard</a></li>
+                            <li><i class="bi bi-bar-chart"></i><a
+                                    href="all-ncrs.html" class="active">All
+                                    NCRs</a></li>
+                            <li><i class="bi bi-pencil"></i><a
+                                    href="edit-ncr.html">Edit NCR</a></li>
+                            <li><i class="bi bi-gear"></i><a
+                                    href="/">Settings</a></li>
+                            <hr />
+                            <li><i class="bi bi-star"></i><a href="/">QA
+                                    Panel</a></li>
+                            <li><i class="bi bi-star"></i><a
+                                    href="/">Engineering Panel</a></li>
+                            <li><i class="bi bi-star"></i><a href="/">Operations
+                                    Panel</a></li>
+                        </ul>
+                    </nav>
                 </div>
-            </div>
-        </aside>
-
-        <!-- Main -->
-        <main class="main">
-            <header class="padding">
-                <div class="flex mobile">
-                    <div class="hamburger-menu"><i class="bi bi-list"></i></div>
-                    <div class="logo">CrossFire</div>
-                </div>
-                <div class="grid-end">
-                    <div class="flex">
-                        <div class="notification-btn"><i class="bi bi-bell"></i></div>
-                        <div class="user-info desktop"><span>John Doe</span></div>
-                        <div class="avatar-btn"><span>a</span></div>
-                    </div>
-                </div>
-            </header>
-
-            <section id="main-section" class="padding">
-                <div class="vertical-spacing grid">
-
-                    <!-- Summary cards -->
-                    <div class="summary-cards grid">
-                        <div class="card grid">
-                            <h3 class="num">10</h3>
-                            <p class="title">Active NCR</p>
+                <div class="theme-toggle padding">
+                    <div class="mode">
+                        <div>
+                            <i class="bi bi-moon"></i>
+                            <span id="theme-text"></span>
                         </div>
-                        <div class="card grid">
-                            <h3 class="num">22</h3>
-                            <p class="title">Closed NCR</p>
-                        </div>
-                        <div class="card grid">
-                            <h3 class="num">32</h3>
-                            <p class="title">Total NCR</p>
+                        <div>
+                            <label class="switch">
+                                <input type="checkbox" id="theme-switch">
+                                <span class="slider"></span>
+                            </label>
                         </div>
                     </div>
-
-                    <!-- Table -->
-                    <table class="table-container">
-                        <thead>
-                            <tr>
-                                <th>NCR Number</th>
-                                <th>Created On</th>
-                                <th>Supplier</th>
-                                <th>Status</th>
-                                <th>Action</th>
-                            </tr>
-                        </thead>
-                        <tbody>
-                            <tr>
-                                <td>2025-001</td>
-                                <td>02-10-2025</td>
-                                <td>Niagara College</td>
-                                <td>Active</td>
-                                <td><a href="edit-ncr.html">View/Edit</a></td>
-                            </tr>
-                            <tr>
-                                <td>2025-002</td>
-                                <td>03-10-2025</td>
-                                <td>Niagara College</td>
-                                <td>Closed</td>
-                                <td><a href="edit-ncr.html">View/Edit</a></td>
-                            </tr>
-                            <tr>
-                                <td>2025-003</td>
-                                <td>04-10-2025</td>
-                                <td>Niagara College</td>
-                                <td>Pending</td>
-                                <td><a href="edit-ncr.html">View/Edit</a></td>
-                            </tr>
-                            <tr>
-                                <td>2025-004</td>
-                                <td>05-10-2025</td>
-                                <td>Niagara College</td>
-                                <td>Active</td>
-                                <td><a href="edit-ncr.html">View/Edit</a></td>
-                            </tr>
-                        </tbody>
-                    </table>
-
                 </div>
-            </section>
-        </main>
-    </div>
+            </aside>
 
-    <script src="/script/main.js"></script>
-</body>
+            <!-- Main -->
+            <main class="main">
+                <header class="padding">
+                    <div class="flex mobile">
+                        <div class="hamburger-menu"><i
+                                class="bi bi-list"></i></div>
+                        <div class="logo">CrossFire</div>
+                    </div>
+                    <div class="grid-end">
+                        <div class="flex">
+                            <div class="notification-btn"><i
+                                    class="bi bi-bell"></i></div>
+                            <div class="user-info desktop"><span>John
+                                    Doe</span></div>
+                            <div class="avatar-btn"><span>a</span></div>
+                        </div>
+                    </div>
+                </header>
+
+                <section id="main-section" class="padding">
+                    <div class="vertical-spacing grid">
+
+                        <!-- Filters -->
+                        <h2>All NCR Logs</h2>
+                        <section class="grid filter">
+                            <div>
+                                <label for="search-logs">Search Logs</label>
+                                <input type="search" id="search-logs"
+                                    list="search-supplier"
+                                    name="txtSupplier"
+                                    placeholder="Enter ncr number...">
+
+                                <datalist id="search-supplier">
+                                    <option value="Niagara College"></option>
+                                    <option value="Ontario Steelworks"></option>
+                                    <option value="Hamilton Parts Co."></option>
+                                    <option
+                                        value="Maple Plastics Ltd."></option>
+                                    <option
+                                        value="GreenTech Supplies"></option>
+                                </datalist>
+                            </div>
+                            <div class="grid filter-options">
+                                <!-- Status filter  -->
+                                <div>
+                                    <label for="status">Status</label>
+                                    <select name="status" id="status">
+                                        <option value="active">Active</option>
+                                        <option value="closed">Closed</option>
+                                        <option value="all"
+                                            selected>All</option>
+                                    </select>
+                                </div>
+                                <!-- Date Filter  -->
+                                <div class="grid filter-date">
+                                    <div>
+                                        <label for="fromDate">From</label>
+                                        <input type="date" id="fromDate"
+                                            name="fromDate">
+                                    </div>
+                                    <div>
+                                        <label for="toDate">To</label>
+                                        <input type="date" id="toDate"
+                                            name="toDate">
+                                    </div>
+                                </div>
+
+                            </div>
+                        </section>
+
+                        <!-- Table -->
+                        <section class="table-container">
+                            <table>
+                                <thead>
+                                    <tr>
+                                        <th>NCR Number</th>
+                                        <th>Created On</th>
+                                        <th>Supplier</th>
+                                        <th>Status</th>
+                                        <th>Action</th>
+                                    </tr>
+                                </thead>
+                                <tbody id="ncr-logs-table">
+                                    <!-- <tr>
+                                        <td>2025-001</td>
+                                        <td>02-10-2025</td>
+                                        <td>Niagara College</td>
+                                        <td>Active</td>
+                                        <td><a
+                                                href="edit-ncr.html">View/Edit</a></td>
+                                    </tr>
+                                    -->
+                                </tbody>
+                            </table>
+                        </section>
+
+                    </div>
+                </section>
+            </main>
+        </div>
+
+        <!-- Script -->
+        <script src="https://code.jquery.com/jquery-3.7.1.js"
+            integrity="sha256-eKhayi8LEQwp4NKxN+CfCh+3qOVUtJn3QNZ0TciWLP4="
+            crossorigin="anonymous"></script>
+        <script src="/script/main.js"></script>
+    </body>
 </html>

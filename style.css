@@ -2,7 +2,7 @@
 
 /* Themes  */
 :root {
-	--radius: 0.35em;
+	--radius: 0.35rem;
 	/* Backgrounds */
 	--bg-body: #f9fafb;
 	--bg-sidebar: #ffffff;
@@ -66,7 +66,7 @@ body {
 	margin: 0;
 }
 a {
-    text-decoration: none;
+	text-decoration: none;
 }
 h1,
 h2,
@@ -80,28 +80,28 @@ h6 {
 	margin: 0 0 0.75rem;
 }
 h1 {
-	font-size: 2rem;
+	font-size: 1.6rem;
 }
 h2 {
-	font-size: 1.85rem;
+	font-size: 1.4rem;
 }
 h3 {
-	font-size: 1.75rem;
+	font-size: 1.2rem;
 }
 h4 {
-	font-size: 1.125rem;
-}
-h5 {
 	font-size: 1rem;
 }
+h5 {
+	font-size: 0.8rem;
+}
 h6 {
-	font-size: 0.875rem;
+	font-size: 0.6rem;
 }
 button {
 	display: inline-flex;
 	align-items: center;
 	justify-content: center;
-	padding: 0.8em 2em;
+	padding: 0.8rem 2rem;
 	border: 1px solid var(--border-color);
 	border-radius: var(--radius);
 	cursor: pointer;
@@ -118,7 +118,12 @@ hr {
 .grid {
 	display: grid;
 }
+label {
+	color: var(--text-secondary);
+	font-size: 0.8rem;
+}
 input,
+select,
 textarea {
 	width: 100%;
 	padding: 0.65rem 0.8rem;
@@ -130,11 +135,13 @@ textarea {
 	caret-color: var(--primary-hover);
 }
 input::placeholder,
+select::placeholder,
 textarea::placeholder {
 	color: var(--text-secondary);
 	opacity: 0.9;
 }
 input:focus,
+select:focus,
 textarea:focus {
 	outline-color: var(--primary-hover);
 }
@@ -142,25 +149,31 @@ textarea {
 	min-height: 140px;
 	resize: vertical;
 }
-table.table-container {
-	background-color: var(--bg-card);
+.table-container {
+	overflow-x: auto;
 	width: 100%;
-	text-align: center;
-	border-collapse: collapse;
 }
-table.table-container td,
-table.table-container th {
+table {
+	background-color: var(--bg-card);
+	border-radius: var(--border-color);
+	width: 100%;
+	min-width: 600px;
+	border-collapse: collapse;
+	text-align: center;
+}
+table td,
+table th {
 	border: 1px solid var(--border-color);
 	padding: 0.9rem;
 }
 
-table.table-container thead {
+table thead {
 	background-color: var(--bg-body);
 }
 
-table.table-container a{
-  color: var(--primary);
- text-decoration: none;
+table a {
+	color: var(--primary);
+	text-decoration: none;
 }
 
 /* --------------------------------------------------------------------  */
@@ -180,8 +193,8 @@ table.table-container a{
 
 .login-container .box {
 	background: var(--bg-card);
-	width: 20em;
-	height: 10em;
+	width: 20rem;
+	height: 10rem;
 	border: 1px solid var(--color-primary-300);
 	border-radius: var(--radius);
 	display: grid;
@@ -219,7 +232,7 @@ table.table-container a{
 	color: var(--text-secondary);
 }
 .sidebar nav ul li a {
-    color: var(--text-secondary);
+	color: var(--text-secondary);
 }
 .sidebar nav ul li:hover,
 .sidebar nav ul li.active a {
@@ -352,15 +365,17 @@ main {
 	height: 100%;
 }
 .summary-cards {
-	grid-template-columns: repeat(3, 1fr);
+	grid-template-columns: repeat(1, 1fr);
 	gap: 10px;
 }
-.summary-cards .card {
+.card {
 	background: var(--bg-card);
 	border: 1px solid var(--border);
 	border-radius: 0.75rem;
 	padding: 1.5rem;
 	transition: background-color 0.3s, border-color 0.3s;
+}
+.summary-cards .card {
 	justify-items: center;
 }
 
@@ -375,10 +390,26 @@ main {
 .vertical-spacing {
 	gap: 20px;
 }
+.recent-activity p {
+	color: var(--text-secondary);
+}
+.filter-date {
+	grid-template-columns: repeat(2, 1fr);
+}
+.filter, .filter-options,
+.filter-date {
+	gap: 10px;
+}
 /* --------------------------------------------------------------------  */
 
 /* Tablet View  */
 @media screen and (min-width: 768px) {
+	.summary-cards {
+		grid-template-columns: repeat(3, 1fr);
+	}
+    .filter-options{
+        grid-template-columns: repeat(2, 1fr);
+    }
 }
 
 /* Desktop View  */
@@ -403,50 +434,53 @@ main {
 	header {
 		grid-template-columns: 1fr;
 	}
+    .filter{
+        grid-template-columns: repeat(2, 1fr);
+    }
 }
 /* Edit NCR Form Styling */
 .edit-form {
-  display: grid;
-  gap: 15px;
-  max-width: 500px;
+	display: grid;
+	gap: 15px;
+	max-width: 500px;
 }
 
 .edit-form label {
-  font-weight: 600;
+	font-weight: 600;
 }
 
 .edit-form input,
 .edit-form select {
-  padding: 10px;
-  border: 1px solid #ccc;
-  border-radius: 6px;
-  font-size: 1rem;
-  width: 100%;
+	padding: 10px;
+	border: 1px solid #ccc;
+	border-radius: 6px;
+	font-size: 1rem;
+	width: 100%;
 }
 
 .edit-form input[readonly] {
-  background-color: #f2f2f2;
-  color: #555454;
+	background-color: #f2f2f2;
+	color: #555454;
 }
 
 .edit-form .btn-style {
-  background-color: #035ea3;
-  color: white;
-  padding: 10px 16px;
-  border: none;
-  border-radius: 6px;
-  cursor: pointer;
-  font-size: 1rem;
-  transition: 0.2s ease;
+	background-color: #035ea3;
+	color: white;
+	padding: 10px 16px;
+	border: none;
+	border-radius: 6px;
+	cursor: pointer;
+	font-size: 1rem;
+	transition: 0.2s ease;
 }
 
 .edit-form .btn-style:hover {
-  background-color: #055996;
+	background-color: #055996;
 }
 
 /* Button link (Back to Dashboard) */
 a.btn-style {
-  display: inline-block;
-  text-align: center;
-  text-decoration: none;
+	display: inline-block;
+	text-align: center;
+	text-decoration: none;
 }
