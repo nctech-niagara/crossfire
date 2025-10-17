@@ -97,7 +97,8 @@ h5 {
 h6 {
 	font-size: 0.6rem;
 }
-button {
+button,
+.btn-style {
 	display: inline-flex;
 	align-items: center;
 	justify-content: center;
@@ -155,7 +156,7 @@ textarea {
 }
 table {
 	background-color: var(--bg-card);
-	border-radius: var(--border-color);
+	border-radius: var(--radius);
 	width: 100%;
 	min-width: 600px;
 	border-collapse: collapse;
@@ -396,7 +397,8 @@ main {
 .filter-date {
 	grid-template-columns: repeat(2, 1fr);
 }
-.filter, .filter-options,
+.filter,
+.filter-options,
 .filter-date {
 	gap: 10px;
 }
@@ -407,9 +409,9 @@ main {
 	.summary-cards {
 		grid-template-columns: repeat(3, 1fr);
 	}
-    .filter-options{
-        grid-template-columns: repeat(2, 1fr);
-    }
+	.filter-options {
+		grid-template-columns: repeat(2, 1fr);
+	}
 }
 
 /* Desktop View  */
@@ -434,9 +436,9 @@ main {
 	header {
 		grid-template-columns: 1fr;
 	}
-    .filter{
-        grid-template-columns: repeat(2, 1fr);
-    }
+	.filter {
+		grid-template-columns: repeat(2, 1fr);
+	}
 }
 /* Edit NCR Form Styling */
 .edit-form {

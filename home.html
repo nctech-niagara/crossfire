@@ -17,20 +17,26 @@
       <aside class="sidebar padding">
         <div>
           <div class="logo"><h1>CrossFire</h1></div>
-          <hr />
+          <hr>
           <nav>
             <ul>
-              <li><i class="bi bi-grid"></i><a href="home.html"
-                  class="active">Dashboard</a></li>
-              <li><i class="bi bi-bar-chart"></i><a href="all-ncrs.html">All
+              <li><i class="bi bi-grid"></i><a
+                  href="home.html">Dashboard</a></li>
+              <li><i class="bi bi-bar-chart"></i><a
+                  href="all-ncrs.html" class="active">All
                   NCRs</a></li>
-              <li><i class="bi bi-pencil"></i><a href="edit-ncr.html">Edit
-                  NCR</a></li>
-              <li><i class="bi bi-gear"></i><a href="/">Settings</a></li>
-              <hr />
-              <li><i class="bi bi-star"></i><a href="/">QA Panel</a></li>
-              <li><i class="bi bi-star"></i><a href="/">Engineering
+              <li><i class="bi bi-pencil"></i><a
+                  href="edit-ncr.html">Edit NCR</a></li>
+              <li><i class="bi bi-gear"></i><a
+                  href="/">Settings</a></li>
+
+            </ul>
+            <hr>
+            <ul>
+              <li><i class="bi bi-star"></i><a href="/">QA
                   Panel</a></li>
+              <li><i class="bi bi-star"></i><a
+                  href="/">Engineering Panel</a></li>
               <li><i class="bi bi-star"></i><a href="/">Operations
                   Panel</a></li>
             </ul>
@@ -44,7 +50,7 @@
               <span id="theme-text"></span>
             </div>
             <div>
-              <label class="switch">
+              <label class="switch" aria-label="switch theme mode">
                 <input type="checkbox" id="theme-switch">
                 <span class="slider"></span>
               </label>
@@ -69,7 +75,7 @@
           </div>
         </header>
 
-        <section id="main-section" class="padding">
+        <div id="main-section" class="padding">
           <div class="vertical-spacing grid">
             <!-- Summary cards -->
             <section>
@@ -104,13 +110,6 @@
                   </tr>
                 </thead>
                 <tbody id="ncr-logs-table-home">
-                  <!-- <tr>
-                    <td>2025-001</td>
-                    <td>02-10-2025</td>
-                    <td>Niagara College</td>
-                    <td>Active</td>
-                    <td><a href="edit-ncr.html">View/Edit</a></td>
-                  </tr> -->
 
                 </tbody>
               </table>
@@ -127,7 +126,7 @@
             </section>
 
           </div>
-        </section>
+        </div>
       </main>
     </div>
 
