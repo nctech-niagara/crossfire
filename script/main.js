@@ -1,6 +1,19 @@
-const themeSwitch = document.getElementById("theme-switch");
-const themeText = document.getElementById("theme-text");
-
+document.addEventListener("DOMContentLoaded", () => {
+	const themeSwitch = document.getElementById("theme-switch");
+	const themeText = document.getElementById("theme-text");
+  
+	const isDark = localStorage.getItem("theme") === "dark";
+	document.body.classList.toggle("dark", isDark);
+	themeSwitch.checked = isDark;
+	themeText.textContent = isDark ? "Light Mode" : "Dark Mode";
+  
+	themeSwitch.addEventListener("change", () => {
+	  const isDark = themeSwitch.checked;
+	  document.body.classList.toggle("dark", isDark);
+	  themeText.textContent = isDark ? "Light Mode" : "Dark Mode";
+	  localStorage.setItem("theme", isDark ? "dark" : "light");
+	});
+  });
 themeText.textContent = "Dark Mode";
 
 let url = "/data/data.json";
@@ -25,7 +38,7 @@ function populateTable(logs) {
         <td><span class="status ${log.status.toLowerCase()}">${
 			log.status
 		}</span></td>
-        <td><a href="edit-ncr.html?ncr=${log.ncrNumber}">View/Edit</a></td>
+        <td><a href="view-ncr.html?ncr=${log.ncrNumber}">View</a></td>
       </tr>
     `;
 	});
@@ -38,7 +51,7 @@ function populateTable(logs) {
         <td><span class="status ${log.status.toLowerCase()}">${
 			log.status
 		}</span></td>
-        <td><a href="edit-ncr.html?ncr=${log.ncrNumber}">View/Edit</a></td>
+        <td><a href="view-ncr.html?ncr=${log.ncrNumber}">View</a></td>
       </tr>
     `;
 	});
@@ -69,10 +82,19 @@ $("#status").on("change", function () {
 });
 
 //Light and dark mode switch
+const isDark = localStorage.getItem("theme") === "dark";
+document.body.classList.toggle("dark", isDark);
+themeSwitch.checked = isDark;
+themeText.textContent = isDark ? "Light Mode" : "Dark Mode";
+
+//  Toggle dark mode when user interacts
 themeSwitch.addEventListener("change", () => {
-	const isDark = themeSwitch.checked;
-	document.body.classList.toggle("dark", themeSwitch.checked);
-	themeText.textContent = isDark ? "Light Mode" : "Dark Mode";
+  const isDark = themeSwitch.checked;
+  document.body.classList.toggle("dark", isDark);
+  themeText.textContent = isDark ? "Light Mode" : "Dark Mode";
+
+  // Save the preference in localStorage
+  localStorage.setItem("theme", isDark ? "dark" : "light");
 });
 
 //Navigation
