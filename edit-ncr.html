@@ -13,7 +13,7 @@
         <!-- Sidebar -->
         <aside class="sidebar padding">
             <div>
-                <div class="logo"><h1>CrossFire</h1></div>
+                <div class="logo"><img src="assets/Crossfire Logo-transparent.png" alt="Crossfire" width="206"></div>
                 <hr />
                 <nav>
                     <ul>
@@ -28,20 +28,6 @@
                     </ul>
                 </nav>
             </div>
-            <div class="theme-toggle padding">
-                <div class="mode">
-                    <div>
-                        <i class="bi bi-moon"></i>
-                        <span id="theme-text"></span>
-                    </div>
-                    <div>
-                        <label class="switch">
-                            <input type="checkbox" id="theme-switch">
-                            <span class="slider"></span>
-                        </label>
-                    </div>
-                </div>
-            </div>
         </aside>
 
         <!-- Main -->
@@ -49,7 +35,7 @@
             <header class="padding">
                 <div class="flex mobile">
                     <div class="hamburger-menu"><i class="bi bi-list"></i></div>
-                    <div class="logo">CrossFire</div>
+                    <div class="logo"><img src="assets/Crossfire Logo-transparent.png" alt="Crossfire" width="206"></div>
                 </div>
                 <div class="grid-end">
                     <div class="flex">
@@ -60,29 +46,65 @@
                 </div>
             </header>
 
+            <!--Quality Rep NCR page-->
+
             <section id="main-section" class="padding">
                 <form id="edit-ncr-form" class="vertical-spacing grid">
                     <h2>Edit NCR</h2>
 
-                    <label for="ncr-number">NCR Number (cannot edit)</label>
-                    <input type="text" id="ncr-number" value="2025-001" disabled>
+                    <!--ADD CHECKBOXES. REFERENCE ORIGINAL NCR PAGE.-->
+                    
+                    <div>
+                    <label for="ncr-number">NCR Number</label>
+                    <lable for="ncr-number" class="mini-text">*NCR Number is auto generated</lable>
+                    <input type="text" id="ncr-number" value="2025-001" class="muted-text" disabled>
 
-                    <label for="created-on">Created On <span class="required">*</span></label>
+                    <label for="prod-number">PO or Prod. Number<span class="required">*</span></label>
+                    <input type="number" id="prod-number" placeholder="*0000" required>
+
+                    <label for="sales-number">Sales Order Number<span class="required">*</span></label>
+                    <input type="number" id="sales-number" placeholder="*0000" required>
+
+                    <label for="quantity-num">Quantity receved<span class="required">*</span></label>
+                    <input type="number" id="quantity-num" placeholder="*00" required>
+                    
+                    <label for="quantity-num-defect">Quantity defective<span class="required">*</span></label>
+                    <input type="number" id="quantity-num-defect" placeholder="*00" required>
+                    </div>
+
+                    <div>
+                    <!--ADD CHECKBOXES. REFERENCE ORIGINAL NCR PAGE.-->
+
+                    <label for="supplier">Supplier Name<span class="required">*</span></label>
+                    <input type="text" id="supplier" placeholder="*Example Supply Co." required>
+
+                    <label for="desc-item">Description of Item (including SAP Number)<span class="required">*</span></label>
+                    <textarea id="desc-item" placeholder="*Description of Item here" required></textarea>
+
+                    <label for="desc-defect">Description of Defect<span class="required">*</span></label>
+                    <textarea id="desc-defect" placeholder="*Description of Defect in as much detail as possible" required></textarea>
+
+                    <!--ADD CHECKBOXES. REFERENCE ORIGINAL NCR PAGE.-->
+                    </div>
+
+                    <div>
+                    <label for="quality-rep-name">Quality Representative's Name<span class="required">*</span></label>
+                    <input type="text" id="quality-rep-name" placeholder="*John Doe" required>
+
+                    <label for="remarks">Additional Comments (optional)</label>
+                    <textarea id="remarks" placeholder="*Additional Comments Here"></textarea>
+
+                    <label for="created-on">Created On<span class="required">*</span></label>
                     <input type="date" id="created-on" required>
+                    </div>
 
-                    <label for="supplier">Supplier <span class="required">*</span></label>
-                    <input type="text" id="supplier" placeholder="Supplier Name" required>
-
-                    <label for="status">Status <span class="required">*</span></label>
+                    <label for="status">Status<span class="required">*</span></label>
                     <select id="status" required>
-                        <option value="">Select status</option>
+                        <option value="">*Select status</option>
                         <option value="Active">Active</option>
                         <option value="Closed">Closed</option>
                         <option value="Pending">Pending</option>
                     </select>
-
-                    <label for="remarks">Remarks (optional)</label>
-                    <textarea id="remarks" placeholder="Optional remarks"></textarea>
 
                     <button type="submit" class="btn-style">Save NCR</button>
                 </form>
