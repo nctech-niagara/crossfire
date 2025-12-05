@@ -56,42 +56,86 @@
                 </div>
                 <div class="grid-end">
                     <div class="flex">
-                        <div class="notification-btn"><i class="bi bi-bell"></i></div>
+                        <div class="notification-btn">
+                         <i class="bi bi-bell"></i>
+                         <span id="engineer-notif" style="
+                        display:none;
+                        background:red;
+                        color:white;
+                        border-radius:50%;
+                         padding:2px 6px;
+                        font-size:0.7rem;
+                        position:absolute;
+                        margin-left:-10px;
+                        margin-top:-5px;
+                        "></span>
+                    
+                </div>
+
                         <div class="user-info desktop"><span>John Doe</span></div>
                         <div class="avatar-btn"><span>a</span></div>
                     </div>
                 </div>
             </header>
 
-            <section id="main-section" class="padding">
-                <form id="engineer-ncr-form" class="vertical-spacing grid">
-                    <h2>Engineering Stage</h2>
+  <section id="main-section" class="padding">
 
-                    <label>Review by CF Engineering: (indicate disposition by "checking" one of the following)</label>
-                    <input type="radio" name="ncrEngineer" value="AsIs"> Use As Is
-                    <input type="radio" name="ncrEngineer" value="Repair"> Repair
-                    <input type="radio" name="ncrEngineer" value="Rework"> Rework
-                    <input type="radio" name="ncrEngineer" value="Scrap"> Scrap
+    <h2>Engineering NCRs</h2>
 
+    <table class="table">
+        <thead>
+            <tr>
+                <th>NCR</th>
+                <th>Created</th>
+                <th>Supplier</th>
+                <th>Status</th>
+                <th>Action</th>
+            </tr>
+        </thead>
+        <tbody id="engineering-ncr-table"></tbody>
+    </table>
 
-                    <div class="form-group-ncr">
-                        <label><strong>Does Customer require notification?</strong></label>
-                        <input type="radio" name="ncrCustomer" value="Yes"> Yes
-                        <input type="radio" name="ncrCustomer" value="No"> No
-                    </div>
+    <br><br>
 
-                    <div id="ncrNote" class="note">
-                        (If "Yes" then raise message to customer detailing issues)
-                    </div>
+    <form id="engineering-ncr-form" class="vertical-spacing grid edit-form">
+        <h3>Engineering Stage</h3>
 
-                    <button type="submit" class="btn-style" id="submitbtn">Save NCR</button>
-                </form>
-            </section>
+        <label>NCR Number</label>
+        <input id="eng-ncr-number" type="text" readonly class="muted-text">
+
+        <label>Created On</label>
+        <input id="eng-created-on" type="text" readonly class="muted-text">
+
+        <label>Supplier</label>
+        <input id="eng-supplier" type="text" readonly>
+
+        <label>Engineering Disposition</label>
+        <div>
+            <input type="radio" name="ncrEngineer" value="AsIs"> Use As Is
+            <input type="radio" name="ncrEngineer" value="Repair"> Repair
+            <input type="radio" name="ncrEngineer" value="Rework"> Rework
+            <input type="radio" name="ncrEngineer" value="Scrap"> Scrap
+        </div>
+
+        <label>Customer Requires Notification?</label>
+        <div>
+            <input type="radio" name="ncrCustomer" value="Yes"> Yes
+            <input type="radio" name="ncrCustomer" value="No"> No
+        </div>
+
+        <button type="submit" class="btn-style">Save</button>
+        <button type="button" id="engineering-complete" class="btn-style">Mark Complete</button>
+    </form>
+
+</section>
+
         </main>
     </div>
 
     <script src="/script/main.js"></script>
     <script src="/script/edit-ncr.js"></script>
+    <script src="/script/engineering-ncr.js"></script>
+
 
 
 

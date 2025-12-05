@@ -453,7 +453,7 @@ main {
 	background-color: #055996;
 }
 
-/* Button link (Back to Dashboard) */
+/* Button link */
 a.btn-style {
 	display: inline-block;
 	text-align: center;
@@ -471,4 +471,46 @@ a.btn-style {
 .mini-text {
 	font-size: 0.75rem;
 	color: var(--text-muted);
+}
+/* Dark mode */
+body.dark {
+    --bg-body: #0f172a;
+    --bg-sidebar: #020617;
+    --bg-card: #020617;
+    --bg-hover: #111827;
+
+    --text-main: #e5e7eb;
+    --text-secondary: #cbd5f5;
+    --text-muted: #9ca3af;
+
+    --border-color: #1f2937;
+}
+
+body.dark table {
+    background: var(--bg-card);
+}
+
+body.dark .card {
+    background: var(--bg-card);
+    border-color: var(--border-color);
+}
+
+body.dark .sidebar nav ul li:hover,
+body.dark .sidebar nav ul li.active {
+    background: var(--bg-hover);
+}
+
+.notification-btn {
+    position: relative;
+}
+
+.notification-btn.active-notification::after {
+    content: "";
+    position: absolute;
+    top: 4px;
+    right: 4px;
+    width: 8px;
+    height: 8px;
+    border-radius: 50%;
+    background: var(--error);
 }
