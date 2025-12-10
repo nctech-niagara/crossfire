@@ -133,9 +133,7 @@ document.addEventListener("DOMContentLoaded", function () {
             searchInput.on("keyup", function () {
                 let value = $(this).val().toLowerCase();
                 let filtered = ncrLogs.filter(log =>
-                    log.ncrNumber.toLowerCase().includes(value) ||
-                    log.supplier.toLowerCase().includes(value) ||
-                    log.status.toLowerCase().includes(value)
+                    log.ncrNumber.toLowerCase().includes(value)
                 );
                 populateTable(filtered);
             });

@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Edit NCR - CrossFire</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.css">
+</head>
+<body>
+    <div class="container">
+
+        <!-- Sidebar -->
+        <aside class="sidebar padding">
+            <div>
+                <div class="logo">
+                    <a href="home.html">
+                      <img src="assets/Crossfire Logo-transparent.png" alt="Crossfire" width="206">
+                    </a>
+                </div>
+                <hr />
+                <nav>
+                    <ul>
+                        <li><i class="bi bi-grid"></i><a href="home.html">Dashboard</a></li>
+                        <li><i class="bi bi-bar-chart"></i><a href="all-ncrs.html" class="active">View NCRs</a></li>
+                        <li><i class="bi bi-pencil"></i><a href="create-ncr.html">Create NCR</a></li>
+                        <li><i class="bi bi-gear"></i><a href="/">Log out</a></li>
+                        <hr/>
+                        <li><i class="bi bi-star"></i><a href="qualityrep.html">Quality Rep Portion</a></li>
+                        <li><i class="bi bi-star"></i><a href="engineering-ncr.html">Engineering Portion</a></li>
+                        <li><i class="bi bi-star"></i><a href="purchasing.html">Purchasing/Operations Portion</a></li>
+                    </ul>
+                </nav>
+            </div>
+        </aside>
+
+        <!-- Main Content -->
+        <main>
+            <form>
+    
+                <!-- 1/ Quality Section -->
+                <div class="section">
+                    <h3>Quality Representative</h3>
+                    <label>NCR No.:</label>
+                    <input type="text" name="ncr_no">
+    
+                    <label>Supplier or Rec-Insp PO or Prod. No.:</label>
+                    <input type="text" name="supplier_po_prod_no">
+    
+                    <label>WIP (Production Order) / Sales Order No.:</label>
+                    <input type="text" name="wip_sales_order">
+    
+                    <label>Description of Item (including SAP No.):</label>
+                    <textarea name="item_description"></textarea>
+    
+                    <label>Quantity Received:</label>
+                    <input type="number" name="quantity_received">
+    
+                    <label>Quantity Defective:</label>
+                    <input type="number" name="quantity_defective">
+    
+                    <div class="radio-group">
+                        <label>Item marked Nonconforming:</label>
+                        <label><input type="radio" name="nonconforming" value="yes"> Yes</label>
+                        <label><input type="radio" name="nonconforming" value="no"> No</label>
+                    </div>
+    
+                    <label>Quality Representative's Name:</label>
+                    <input type="text" name="quality_rep_name">
+    
+                    <label>Date:</label>
+                    <input type="date" name="quality_date">
+                </div>
+    
+                <!-- 2/ Engineering Section -->
+                <div class="section">
+                    <h3>2/ Engineering</h3>
+    
+                    <div class="radio-group">
+                        <label>Disposition:</label>
+                        <label><input type="radio" name="engineering_disposition" value="use_as_is"> Use As Is</label>
+                        <label><input type="radio" name="engineering_disposition" value="repair"> Repair</label>
+                        <label><input type="radio" name="engineering_disposition" value="rework"> Rework</label>
+                        <label><input type="radio" name="engineering_disposition" value="scrap"> Scrap</label>
+                    </div>
+    
+                    <div class="radio-group">
+                        <label>Does Customer require notification of NCR?</label>
+                        <label><input type="radio" name="customer_notify" value="yes"> Yes</label>
+                        <label><input type="radio" name="customer_notify" value="no"> No</label>
+                    </div>
+    
+                    <div class="radio-group">
+                        <label>Does the drawing require updating?</label>
+                        <label><input type="radio" name="drawing_update" value="yes"> Yes</label>
+                        <label><input type="radio" name="drawing_update" value="no"> No</label>
+                    </div>
+    
+                    <label>Original Rev. Number:</label>
+                    <input type="text" name="original_rev_number">
+    
+                    <label>Name of Engineer:</label>
+                    <input type="text" name="engineer_name">
+    
+                    <label>Revision Date:</label>
+                    <input type="date" name="revision_date">
+    
+                    <label>Engineering Date:</label>
+                    <input type="date" name="engineering_date">
+                </div>
+    
+                <button type="submit">Save NCR</button>
+    
+            </form>
+        </main>
+    
+    </div>
+    
+        
+
+    <!-- Scripts -->
+    <script src="https://code.jquery.com/jquery-3.7.1.js"></script>
+    <script src="/script/main.js"></script>
+    <script src="/script/edit-ncr.js"></script>
+
+</body>
+</html>

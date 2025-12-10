@@ -16,7 +16,9 @@
         <aside class="sidebar padding">
             <div>
                 <div class="logo">
-                    <h1>CrossFire</h1>
+                    <a href="home.html">
+                        <img src="assets/Crossfire Logo-transparent.png" alt="Crossfire" width="206">
+                    </a>
                 </div>
                 <hr />
                 <nav>
@@ -25,10 +27,10 @@
                         <li><i class="bi bi-bar-chart"></i><a href="all-ncrs.html" class="active">View NCRs</a></li>
                         <li><i class="bi bi-pencil"></i><a href="create-ncr.html">Create NCR</a></li>
                         <li><i class="bi bi-gear"></i><a href="/">Log out</a></li>
-                        <hr/>
-                        <li><i class="bi bi-star"></i><a href="create-ncr.html">Quality Rep Portion</a></li>
+                        <hr />
+                        <li><i class="bi bi-star"></i><a href="qualityrep.html">Quality Rep Portion</a></li>
                         <li><i class="bi bi-star"></i><a href="engineering-ncr.html">Engineering Portion</a></li>
-                        <li><i class="bi bi-star"></i><a href="/">Purchasing/Operations Portion</a></li>
+                        <li><i class="bi bi-star"></i><a href="purchasing.html">Purchasing/Operations Portion</a></li>
                     </ul>
                 </nav>
             </div>
@@ -57,8 +59,8 @@
                 <div class="grid-end">
                     <div class="flex">
                         <div class="notification-btn">
-                         <i class="bi bi-bell"></i>
-                         <span id="engineer-notif" style="
+                            <i class="bi bi-bell"></i>
+                            <span id="engineer-notif" style="
                         display:none;
                         background:red;
                         color:white;
@@ -69,8 +71,8 @@
                         margin-left:-10px;
                         margin-top:-5px;
                         "></span>
-                    
-                </div>
+
+                        </div>
 
                         <div class="user-info desktop"><span>John Doe</span></div>
                         <div class="avatar-btn"><span>a</span></div>
@@ -78,56 +80,56 @@
                 </div>
             </header>
 
-  <section id="main-section" class="padding">
+            <section id="main-section" class="padding">
 
-    <h2>Engineering NCRs</h2>
+                <h2>Engineering NCRs</h2>
 
-    <table class="table">
-        <thead>
-            <tr>
-                <th>NCR</th>
-                <th>Created</th>
-                <th>Supplier</th>
-                <th>Status</th>
-                <th>Action</th>
-            </tr>
-        </thead>
-        <tbody id="engineering-ncr-table"></tbody>
-    </table>
+                <table class="table">
+                    <thead>
+                        <tr>
+                            <th>NCR</th>
+                            <th>Created</th>
+                            <th>Supplier</th>
+                            <th>Status</th>
+                            <th>Action</th>
+                        </tr>
+                    </thead>
+                    <tbody id="engineering-ncr-table"></tbody>
+                </table>
 
-    <br><br>
+                <br><br>
 
-    <form id="engineering-ncr-form" class="vertical-spacing grid edit-form">
-        <h3>Engineering Stage</h3>
+                <form id="engineering-ncr-form" class="vertical-spacing grid edit-form">
+                    <h3>Engineering Stage</h3>
 
-        <label>NCR Number</label>
-        <input id="eng-ncr-number" type="text" readonly class="muted-text">
+                    <label>NCR Number</label>
+                    <input id="eng-ncr-number" type="text" readonly class="muted-text">
 
-        <label>Created On</label>
-        <input id="eng-created-on" type="text" readonly class="muted-text">
+                    <label>Created On</label>
+                    <input id="eng-created-on" type="text" readonly class="muted-text">
 
-        <label>Supplier</label>
-        <input id="eng-supplier" type="text" readonly>
+                    <label>Supplier</label>
+                    <input id="eng-supplier" type="text" readonly>
 
-        <label>Engineering Disposition</label>
-        <div>
-            <input type="radio" name="ncrEngineer" value="AsIs"> Use As Is
-            <input type="radio" name="ncrEngineer" value="Repair"> Repair
-            <input type="radio" name="ncrEngineer" value="Rework"> Rework
-            <input type="radio" name="ncrEngineer" value="Scrap"> Scrap
-        </div>
+                    <label>Engineering Disposition</label>
+                    <div>
+                        <input type="radio" name="ncrEngineer" value="AsIs"> Use As Is
+                        <input type="radio" name="ncrEngineer" value="Repair"> Repair
+                        <input type="radio" name="ncrEngineer" value="Rework"> Rework
+                        <input type="radio" name="ncrEngineer" value="Scrap"> Scrap
+                    </div>
 
-        <label>Customer Requires Notification?</label>
-        <div>
-            <input type="radio" name="ncrCustomer" value="Yes"> Yes
-            <input type="radio" name="ncrCustomer" value="No"> No
-        </div>
+                    <label>Customer Requires Notification?</label>
+                    <div>
+                        <input type="radio" name="ncrCustomer" value="Yes"> Yes
+                        <input type="radio" name="ncrCustomer" value="No"> No
+                    </div>
 
-        <button type="submit" class="btn-style">Save</button>
-        <button type="button" id="engineering-complete" class="btn-style">Mark Complete</button>
-    </form>
+                    <button type="submit" class="btn-style">Save</button>
+                    <button type="button" id="engineering-complete" class="btn-style">Mark Complete</button>
+                </form>
 
-</section>
+            </section>
 
         </main>
     </div>
