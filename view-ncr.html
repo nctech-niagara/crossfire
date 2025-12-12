@@ -3,13 +3,275 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>View NCR - CrossFire</title>
+    <title>Edit NCR - CrossFire</title>
     <link rel="stylesheet" href="style.css">
-     <link rel="stylesheet"
-      href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.css">
-
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.css">
+    <script src="/script/main.js"></script>
+    <script src="/script/edit-ncr.js"></script>
 </head>
 <body>
-    
+    <div class="container">
+
+        <!-- Quick Access Menu -->
+        <aside class="sidebar padding">
+            <div>
+                <div class="logo"><img src="assets/Crossfire Logo-transparent.png" alt="Crossfire" width="206"></div>
+                <hr />
+                <nav>
+                    <ul>
+                        <li><i class="bi bi-grid"></i><a href="home.html">Dashboard</a></li>
+                        <li><i class="bi bi-bar-chart"></i><a href="all-ncrs.html" class="active">View NCRs</a></li>
+                        <li><i class="bi bi-pencil"></i><a href="create-ncr.html">Create NCR</a></li>
+                        <hr/>
+                        <li><i class="bi bi-star"></i><a href="create-ncr.html">Quality Rep Portion</a></li>
+                        <li><i class="bi bi-star"></i><a href="engineering-ncr.html">Engineering Portion</a></li>
+                        <li><i class="bi bi-star"></i><a href="PO-ncr.html">Purchasing/Operations Portion</a></li>
+                    </ul>
+                </nav>
+            </div>
+        </aside>
+        <!-- Quick Access Menu END -->
+
+        <!-- Main -->
+        <main class="main">
+            <header class="padding">
+                <div class="flex mobile">
+                    <div class="hamburger-menu"><i class="bi bi-list"></i></div>
+                    <div class="logo"><img src="assets/Crossfire Logo-transparent.png" alt="Crossfire" width="206"></div>
+                </div>
+                <div class="grid-end">
+                    <div class="flex">
+                        <!--<div class="notification-btn"><i class="bi bi-bell"></i></div>-->
+                        <div class="user-info desktop"><span>John Doe</span></div>
+                        <div class="avatar-btn"><span>a</span></div>
+                    </div>
+                </div>
+            </header>
+
+            <!--Quality Rep NCR page-->
+
+            <section id="main-section" class="padding">
+                <form id="Edit-ncr-form" class="vertical-spacing grid">
+
+                    <h2>Quality Rep Page - Edit NCR</h2>
+                    
+                    <div>
+                    <label for="created-on" class="required">Created On date</label>
+                    <lable for="created-on" class="mini-text">*Date is always Today's Date</lable>
+                    <input type="date" id="created-on" class="muted-text" readonly>
+
+                    <label for="ncr-number" class="required">NCR Number</label>
+                    <lable for="ncr-number" class="mini-text">*NCR Number is auto generated</lable>
+                    <input type="text" id="ncr-number" class="muted-text" readonly>
+
+                    <label for="prod-number">PO or Prod. Number (Numbers only)<span class="required">*</span></label>
+                    <input type="number" id="prod-number" placeholder="*0000" readonly>
+
+                    <label for="sales-number">Sales Order Number (Numbers only)<span class="required">*</span></label>
+                    <input type="number" id="sales-number" placeholder="*0000" readonly>
+
+                    <label for="quantity-num">Quantity receved (Numbers only)<span class="required">*</span></label>
+                    <input type="number" id="quantity-num" placeholder="*00" readonly>
+                    
+                    <label for="quantity-num-defect">Quantity defective (Numbers only)<span class="required">*</span></label>
+                    <input type="number" id="quantity-num-defect" placeholder="*00" readonly>
+                    </div>
+
+                    <div>
+                    <label for="Process">Identify Process Applicable:<span class="required">*</span></label>
+                    <select id="Process" readonly>
+                        <option value="">*Select Process</option>
+                        <option value="SupRec">Supplier or Rec-Insp</option>
+                        <option value="WIP">WIP (Production Order)</option>
+                    </select>
+                    
+                    
+                    <label for="supplierName">Supplier Name<span class="required">*</span></label>
+                    <!--
+                    <select id="supplierName" required>
+                        <option value="">*Select Supplier</option>
+                        ADD CONECTION TO SUPPLIERS.JSON
+                    </select>
+                    -->
+                    <input type="text" id="supplierName" placeholder="*Example Supply Co." readonly>
+
+                    <label for="desc-item">Description of Item (including SAP Number)<span class="required">*</span></label>
+                    <textarea id="desc-item" placeholder="*Description of Item here" readonly></textarea>
+
+                    <label for="desc-defect">Description of Defect<span class="required">*</span></label>
+                    <textarea id="desc-defect" placeholder="*Description of Defect in as much detail as possible" readonly></textarea>
+
+                    <label for="itemMark">Item marked Nonconforming<span class="required">*</span></label>
+                    <select id="itemMark" readonly>
+                        <option value="">*Select status</option>
+                        <option value="yes">Yes</option>
+                        <option value="no">No</option>
+                    </select>
+                    </div>
+
+                    <div>
+                    <label for="quality-rep-name">Quality Representative's Name<span class="required">*</span></label>
+                    <input type="text" id="quality-rep-name" placeholder="*John Doe" readonly>
+
+                    <label for="addinfo">Additional information</label>
+                    <textarea id="addinfo" placeholder="*Additional information Here" readonly></textarea>
+                    </div>
+
+                    <br>
+                    <br>
+                    <br>
+
+                    <!--Engineer NCR page-->
+
+                    <h2>Engineering NCR Page - Edit NCR</h2>
+
+                    <div>
+                    <label for="engDate" class="required">Revision Date</label>
+                    <lable for="engDate" class="mini-text">*Date is always Today's Date</lable>
+                    <input type="date" id="engDate" class="muted-text" readonly>
+                    </div>
+
+                    <div>
+                    <label for="engProcess">Identify Process Applicable<span class="required">*</span></label>
+                    <select id="engProcess" readonly>
+                        <option value="">*Select Process</option>
+                        <option value="SupRec">Supplier or Rec-Insp</option>
+                        <option value="scrapIPA">Scrap</option>
+                    </select>
+                    </div>
+
+                    <div>
+                    <label for="engCF">Review by CF Engineering<span class="required">*</span></label>
+                    <select id="engCF" readonly>
+                        <option value="">*indicate disposition by selecting one of the following</option>
+                        <option value="Use">Use As Is</option>
+                        <option value="Repair">Repair</option>
+                        <option value="Rework">Rework</option>
+                        <option value="scrapRCF">Scrap</option>
+                    </select>
+
+                    <br>
+                    <br>
+
+                    <h3>Disposition (Sequence of work steps required when "repair" or "rework" indicated)</h3>
+
+                    <label for="engDrawing">Does the drawing require updating</label>
+                    <select id="engDrawing" readonly>
+                        <option value="">*Select</option>
+                        <option value="Yes">Yes</option>
+                        <option value="No">No</option>
+                    </select>
+                    </div>
+
+                    <div>
+                    <label for="customerNoti">Does Customer require notification of NCR<span class="required">*</span></label>
+                    <select id="customerNoti" readonly>
+                        <option value="">*Select</option>
+                        <option value="Yes">Yes</option>
+                        <option value="No">No</option>
+                    </select>
+
+                    <label for="customerNotiInfo">(If "Yes" then raise message to customer detailing issues)</label>
+                    <textarea id="customerNotiInfo" placeholder="*Type message to customer detailing issues" readonly></textarea>
+                    </div>
+
+                    <div>
+                    <label for="orgRevNum">Original Rev. Number</label>
+                    <input type="text" id="orgRevNum" readonly>
+
+                    <label for="updRevNum">Updated Rev. Number</label>
+                    <input type="text" id="updRevNum" readonly>       
+                    </div>             
+
+                    <div>
+                    <label for="eng-name">Engineer's Name<span class="required">*</span></label>
+                    <input type="text" id="eng-name" placeholder="*John Doe" readonly>
+
+                    <label for="addinfo2">Additional information</label>
+                    <textarea id="addinfo2" placeholder="*Additional information Here" readonly></textarea>
+                    </div>
+
+                    <br>
+                    <br>
+                    <br>
+
+                    <!--PO NCR page-->
+
+                    <h2>Purchasing & Operations NCR Page - Edit NCR</h2>
+
+                    <div>
+                    <label for="PurPre">Purchasing's Preliminary Decision<span class="required">*</span></label>
+                    <select id="PurPre" readonly>
+                        <option value="">*Select</option>
+                        <option value="Return">Return to Supplier for either "rework" or "replacement"</option>
+                        <option value="Rework">Rework "In-House"</option>
+                        <option value="ScrapIH">Scrap in House"</option>
+                        <option value="Defer">Defer for HBC Engineering Review"</option>
+                    </select>
+                    </div>
+
+                    <div>
+                    <label for="CAR">Was a CAR raised?<span class="required">*</span></label>
+                    <select id="CAR" readonly>
+                        <option value="">*Select</option>
+                        <option value="yes">Yes"</option>
+                        <option value="no">No"</option>
+                    </select>
+
+                    <label for="yesCAR">If "Yes" indicate CAR #</label>
+                    <textarea id="yesCAR" placeholder="CAR NUMBER" readonly></textarea>
+                    </div>
+
+                    <div>
+                    <label for="FollowUp">Follow-up Required?<span class="required">*</span></label>
+                    <select id="FollowUp" readonly>
+                        <option value="">*Select</option>
+                        <option value="yes">Yes"</option>
+                        <option value="no">No"</option>
+                    </select>
+
+                    <label for="typeExDate">If "Yes" indicate type & expected date</label>
+                    <textarea id="typeExDate" placeholder="type & expected date" readonly></textarea>
+                    </div>
+
+                    <div>
+                    <label for="Re-Inspect">Re-Inspected Acceptable?<span class="required">*</span></label>
+                    <select id="Re-Inspect" readonly>
+                        <option value="">*Select</option>
+                        <option value="yes">Yes"</option>
+                        <option value="no">No"</option>
+                    </select>
+
+                    <label for="newNCRnum">(If "No" then record new NCR number)</label>
+                    <textarea id="newNCRnum" placeholder="New NCR Number" readonly></textarea>
+                    </div>
+
+                    <div>
+                    <label for="NCRClosed">NCR Closed<span class="required">*</span></label>
+                    <select id="NCRClosed" readonly>
+                        <option value="no">No</option>
+                        <option value="yes">Yes</option>
+                    </select>
+                    </div>
+
+                    <div>
+                    <label for="opName">Operations Manager's Name<span class="required">*</span></label>
+                    <input type="text" id="opName" placeholder="*John Doe" readonly>
+
+                    <label for="inName">Inspector's Name<span class="required">*</span></label>
+                    <input type="text" id="inName" placeholder="*John Doe" readonly>
+
+                    <label for="qdName">Quality Department Manager's Name<span class="required">*</span></label>
+                    <input type="text" id="qdName" placeholder="*John Doe" readonly>
+
+                    <label for="addinfo3">Additional information</label>
+                    <textarea id="addinfo3" placeholder="*Additional information Here" readonly></textarea>
+                    </div>
+
+                </form>
+            </section>
+        </main>
+    </div>
+
 </body>
 </html>

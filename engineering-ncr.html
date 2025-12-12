@@ -1,144 +1,133 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Engineering NCR - CrossFire</title>
     <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.css">
+    <script src="/script/main.js"></script>
 </head>
-
 <body>
     <div class="container">
 
-        <!-- Sidebar -->
+        <!-- Quick Access Menu -->
         <aside class="sidebar padding">
             <div>
-                <div class="logo">
-                    <h1>CrossFire</h1>
-                </div>
+                <div class="logo"><img src="assets/Crossfire Logo-transparent.png" alt="Crossfire" width="206"></div>
                 <hr />
                 <nav>
                     <ul>
                         <li><i class="bi bi-grid"></i><a href="home.html">Dashboard</a></li>
                         <li><i class="bi bi-bar-chart"></i><a href="all-ncrs.html" class="active">View NCRs</a></li>
                         <li><i class="bi bi-pencil"></i><a href="create-ncr.html">Create NCR</a></li>
-                        <li><i class="bi bi-gear"></i><a href="/">Log out</a></li>
                         <hr/>
                         <li><i class="bi bi-star"></i><a href="create-ncr.html">Quality Rep Portion</a></li>
                         <li><i class="bi bi-star"></i><a href="engineering-ncr.html">Engineering Portion</a></li>
-                        <li><i class="bi bi-star"></i><a href="/">Purchasing/Operations Portion</a></li>
+                        <li><i class="bi bi-star"></i><a href="PO-ncr.html">Purchasing/Operations Portion</a></li>
                     </ul>
                 </nav>
             </div>
-            <div class="theme-toggle padding">
-                <div class="mode">
-                    <div>
-                        <i class="bi bi-moon"></i>
-                        <span id="theme-text"></span>
-                    </div>
-                    <div>
-                        <label class="switch">
-                            <input type="checkbox" id="theme-switch">
-                            <span class="slider"></span>
-                        </label>
-                    </div>
-                </div>
-            </div>
         </aside>
+        <!-- Quick Access Menu END -->
 
+        <!-- Main -->
         <main class="main">
             <header class="padding">
                 <div class="flex mobile">
                     <div class="hamburger-menu"><i class="bi bi-list"></i></div>
-                    <div class="logo">CrossFire</div>
+                    <div class="logo"><img src="assets/Crossfire Logo-transparent.png" alt="Crossfire" width="206"></div>
                 </div>
                 <div class="grid-end">
                     <div class="flex">
-                        <div class="notification-btn">
-                         <i class="bi bi-bell"></i>
-                         <span id="engineer-notif" style="
-                        display:none;
-                        background:red;
-                        color:white;
-                        border-radius:50%;
-                         padding:2px 6px;
-                        font-size:0.7rem;
-                        position:absolute;
-                        margin-left:-10px;
-                        margin-top:-5px;
-                        "></span>
-                    
-                </div>
-
+                        <!--<div class="notification-btn"><i class="bi bi-bell"></i></div>-->
                         <div class="user-info desktop"><span>John Doe</span></div>
                         <div class="avatar-btn"><span>a</span></div>
                     </div>
                 </div>
             </header>
 
-  <section id="main-section" class="padding">
+            <!--Engineer NCR page-->
 
-    <h2>Engineering NCRs</h2>
+            <section id="main-section" class="padding">
+                <form id="engineer-ncr-form" class="vertical-spacing grid">
+                    <h2>Engineering NCR</h2>
 
-    <table class="table">
-        <thead>
-            <tr>
-                <th>NCR</th>
-                <th>Created</th>
-                <th>Supplier</th>
-                <th>Status</th>
-                <th>Action</th>
-            </tr>
-        </thead>
-        <tbody id="engineering-ncr-table"></tbody>
-    </table>
+                    <div>
+                    <label for="engDate" class="required">Revision Date</label>
+                    <lable for="engDate" class="mini-text">*Date is always Today's Date</lable>
+                    <input type="date" id="engDate" class="muted-text" readonly>
+                    </div>
 
-    <br><br>
+                    <div>
+                    <label for="engProcess">Identify Process Applicable<span class="required">*</span></label>
+                    <select id="engProcess" required>
+                        <option value="">*Select Process</option>
+                        <option value="SupRec">Supplier or Rec-Insp</option>
+                        <option value="scrapIPA">Scrap</option>
+                    </select>
+                    </div>
 
-    <form id="engineering-ncr-form" class="vertical-spacing grid edit-form">
-        <h3>Engineering Stage</h3>
+                    <div>
+                    <label for="engCF">Review by CF Engineering<span class="required">*</span></label>
+                    <select id="engCF" required>
+                        <option value="">*indicate disposition by selecting one of the following</option>
+                        <option value="Use">Use As Is</option>
+                        <option value="Repair">Repair</option>
+                        <option value="Rework">Rework</option>
+                        <option value="scrapRCF">Scrap</option>
+                    </select>
 
-        <label>NCR Number</label>
-        <input id="eng-ncr-number" type="text" readonly class="muted-text">
+                    <br>
+                    <br>
 
-        <label>Created On</label>
-        <input id="eng-created-on" type="text" readonly class="muted-text">
+                    <h3>Disposition (Sequence of work steps required when "repair" or "rework" indicated)</h3>
 
-        <label>Supplier</label>
-        <input id="eng-supplier" type="text" readonly>
+                    <label for="engDrawing">Does the drawing require updating</label>
+                    <select id="engDrawing">
+                        <option value="">*Select</option>
+                        <option value="Yes">Yes</option>
+                        <option value="No">No</option>
+                    </select>
+                    </div>
 
-        <label>Engineering Disposition</label>
-        <div>
-            <input type="radio" name="ncrEngineer" value="AsIs"> Use As Is
-            <input type="radio" name="ncrEngineer" value="Repair"> Repair
-            <input type="radio" name="ncrEngineer" value="Rework"> Rework
-            <input type="radio" name="ncrEngineer" value="Scrap"> Scrap
-        </div>
+                    <div>
+                    <label for="customerNoti">Does Customer require notification of NCR<span class="required">*</span></label>
+                    <select id="customerNoti" required>
+                        <option value="">*Select</option>
+                        <option value="Yes">Yes</option>
+                        <option value="No">No</option>
+                    </select>
 
-        <label>Customer Requires Notification?</label>
-        <div>
-            <input type="radio" name="ncrCustomer" value="Yes"> Yes
-            <input type="radio" name="ncrCustomer" value="No"> No
-        </div>
+                    <label for="customerNotiInfo">(If "Yes" then raise message to customer detailing issues)</label>
+                    <textarea id="customerNotiInfo" placeholder="*Type message to customer detailing issues"></textarea>
+                    </div>
 
-        <button type="submit" class="btn-style">Save</button>
-        <button type="button" id="engineering-complete" class="btn-style">Mark Complete</button>
-    </form>
+                    <div>
+                    <label for="orgRevNum">Original Rev. Number</label>
+                    <input type="text" id="orgRevNum" required>
 
-</section>
+                    <label for="updRevNum">Updated Rev. Number</label>
+                    <input type="text" id="updRevNum" required>       
+                    </div>             
 
+                    <div>
+                    <label for="eng-name">Engineer's Name<span class="required">*</span></label>
+                    <input type="text" id="eng-name" placeholder="*John Doe" required>
+
+                    <label for="addinfo2">Additional information</label>
+                    <textarea id="addinfo2" placeholder="*Additional information Here"></textarea>
+                    </div>
+
+                    <div>
+                    <button type="button" id="btnSave" class="btn-style">Save</button>
+                    <button type="submit" class="btn-style" id="submitbtn">Validate and submit</button>
+                    </div>
+
+                </form>
+            </section>
         </main>
     </div>
 
-    <script src="/script/main.js"></script>
-    <script src="/script/edit-ncr.js"></script>
-    <script src="/script/engineering-ncr.js"></script>
-
-
-
-
 </body>
-
 </html>

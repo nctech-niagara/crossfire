@@ -3,14 +3,16 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Create NCR - CrossFire</title>
+    <title>Quality Rep - Create NCR - CrossFire</title>
     <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.css">
+    <script src= "https://cdnjs.cloudflare.com/ajax/libs/html2pdf.js/0.10.1/html2pdf.bundle.min.js"></script>
+    <script src="/script/main.js"></script>
 </head>
 <body>
     <div class="container">
 
-        <!-- Sidebar -->
+        <!-- Quick Access Menu -->
         <aside class="sidebar padding">
             <div>
                 <div class="logo"><img src="assets/Crossfire Logo-transparent.png" alt="Crossfire" width="206"></div>
@@ -20,29 +22,15 @@
                         <li><i class="bi bi-grid"></i><a href="home.html">Dashboard</a></li>
                         <li><i class="bi bi-bar-chart"></i><a href="all-ncrs.html" class="active">View NCRs</a></li>
                         <li><i class="bi bi-pencil"></i><a href="create-ncr.html">Create NCR</a></li>
-                        <li><i class="bi bi-gear"></i><a href="/">Log out</a></li>
                         <hr/>
                         <li><i class="bi bi-star"></i><a href="create-ncr.html">Quality Rep Portion</a></li>
                         <li><i class="bi bi-star"></i><a href="engineering-ncr.html">Engineering Portion</a></li>
-                        <li><i class="bi bi-star"></i><a href="/">Purchasing/Operations Portion</a></li>
+                        <li><i class="bi bi-star"></i><a href="PO-ncr.html">Purchasing/Operations Portion</a></li>
                     </ul>
                 </nav>
             </div>
-            <div class="theme-toggle padding">
-                <div class="mode">
-                    <div>
-                        <i class="bi bi-moon"></i>
-                        <span id="theme-text"></span>
-                    </div>
-                    <div>
-                        <label class="switch">
-                            <input type="checkbox" id="theme-switch">
-                            <span class="slider"></span>
-                        </label>
-                    </div>
-                </div>
-            </div>
         </aside>
+        <!-- Quick Access Menu END -->
 
         <!-- Main -->
         <main class="main">
@@ -53,7 +41,7 @@
                 </div>
                 <div class="grid-end">
                     <div class="flex">
-                        <div class="notification-btn"><i class="bi bi-bell"></i></div>
+                        <!--<div class="notification-btn"><i class="bi bi-bell"></i></div>-->
                         <div class="user-info desktop"><span>John Doe</span></div>
                         <div class="avatar-btn"><span>a</span></div>
                     </div>
@@ -64,33 +52,47 @@
 
             <section id="main-section" class="padding">
                 <form id="create-ncr-form" class="vertical-spacing grid">
-                    <h2>Create NCR</h2>
-
-                    <!--ADD CHECKBOXES. REFERENCE ORIGINAL NCR PAGE.-->
+                    <h2>Quality Rep - Create NCR</h2>
                     
                     <div>
-                    <label for="ncr-number">NCR Number</label>
-                    <lable for="ncr-number" class="mini-text">*NCR Number is auto generated</lable>
-                    <input type="text" id="ncr-number" value="2025-001" class="muted-text" disabled>
+                    <label for="created-on" class="required">Created On date</label>
+                    <lable for="created-on" class="mini-text">*Date is always Today's Date</lable>
+                    <input type="date" id="created-on" class="muted-text" readonly>
 
-                    <label for="prod-number">PO or Prod. Number<span class="required">*</span></label>
+                    <label for="ncr-number" class="required">NCR Number</label>
+                    <lable for="ncr-number" class="mini-text">*NCR Number is auto generated</lable>
+                    <input type="text" id="ncr-number" class="muted-text" readonly>
+
+                    <label for="prod-number">PO or Prod. Number (Numbers only)<span class="required">*</span></label>
                     <input type="number" id="prod-number" placeholder="*0000" required>
 
-                    <label for="sales-number">Sales Order Number<span class="required">*</span></label>
+                    <label for="sales-number">Sales Order Number (Numbers only)<span class="required">*</span></label>
                     <input type="number" id="sales-number" placeholder="*0000" required>
 
-                    <label for="quantity-num">Quantity receved<span class="required">*</span></label>
+                    <label for="quantity-num">Quantity receved (Numbers only)<span class="required">*</span></label>
                     <input type="number" id="quantity-num" placeholder="*00" required>
                     
-                    <label for="quantity-num-defect">Quantity defective<span class="required">*</span></label>
+                    <label for="quantity-num-defect">Quantity defective (Numbers only)<span class="required">*</span></label>
                     <input type="number" id="quantity-num-defect" placeholder="*00" required>
                     </div>
 
                     <div>
-                    <!--ADD CHECKBOXES. REFERENCE ORIGINAL NCR PAGE.-->
-
-                    <label for="supplier">Supplier Name<span class="required">*</span></label>
-                    <input type="text" id="supplier" placeholder="*Example Supply Co." required>
+                    <label for="Process">Identify Process Applicable:<span class="required">*</span></label>
+                    <select id="Process" required>
+                        <option value="">*Select Process</option>
+                        <option value="SupRec">Supplier or Rec-Insp</option>
+                        <option value="WIP">WIP (Production Order)</option>
+                    </select>
+                    
+                    
+                    <label for="supplierName">Supplier Name<span class="required">*</span></label>
+                    <!--
+                    <select id="supplierName" required>
+                        <option value="">*Select Supplier</option>
+                        ADD CONECTION TO SUPPLIERS.JSON
+                    </select>
+                    -->
+                    <input type="text" id="supplierName" placeholder="*Example Supply Co." required>
 
                     <label for="desc-item">Description of Item (including SAP Number)<span class="required">*</span></label>
                     <textarea id="desc-item" placeholder="*Description of Item here" required></textarea>
@@ -98,35 +100,31 @@
                     <label for="desc-defect">Description of Defect<span class="required">*</span></label>
                     <textarea id="desc-defect" placeholder="*Description of Defect in as much detail as possible" required></textarea>
 
-                    <!--ADD CHECKBOXES. REFERENCE ORIGINAL NCR PAGE.-->
+                    <label for="itemMark">Item marked Nonconforming<span class="required">*</span></label>
+                    <select id="itemMark" required>
+                        <option value="">*Select status</option>
+                        <option value="yes">Yes</option>
+                        <option value="no">No</option>
+                    </select>
                     </div>
 
                     <div>
                     <label for="quality-rep-name">Quality Representative's Name<span class="required">*</span></label>
                     <input type="text" id="quality-rep-name" placeholder="*John Doe" required>
 
-                    <label for="remarks">Additional Comments (optional)</label>
-                    <textarea id="remarks" placeholder="*Additional Comments Here"></textarea>
-
-                    <label for="created-on">Created On<span class="required">*</span></label>
-                    <input type="date" id="created-on" required>
+                    <label for="addinfo">Additional information</label>
+                    <textarea id="addinfo" placeholder="*Additional information Here"></textarea>
                     </div>
 
-                    <label for="status">Status<span class="required">*</span></label>
-                    <select id="status" required>
-                        <option value="">*Select status</option>
-                        <option value="Active">Active</option>
-                        <option value="Closed">Closed</option>
-                        <option value="Pending">Pending</option>
-                    </select>
+                    <div>
+                    <button type="button" id="btnSave" class="btn-style">Save</button>
+                    <button type="submit" class="btn-style" id="submitbtn">Validate and submit</button>
+                    </div>
 
-                    <button type="submit" class="btn-style" id="submitbtn">Save NCR</button>
                 </form>
             </section>
         </main>
     </div>
 
-    <script src="/script/main.js"></script>
-    <script src="/script/create-ncr.js"></script>
 </body>
 </html>

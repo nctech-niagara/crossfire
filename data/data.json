@@ -1,122 +1,452 @@
 [
   {
-    "ncrNumber": "2025-001",
+    "ncrNumber": "250105-083015-01",
     "createdOn": "2025-01-05",
-    "supplier": "Niagara College",
-    "status": "Active"
+    "status": "Active",
+
+    "prodNumber": "1001",
+    "salesNumber": "5001",
+    "quantityReceived": "30",
+    "quantityDefective": "3",
+
+    "process": "SupRec",
+    "supplier": "Niagara Plastics",
+
+    "itemDescription": "PVC Elbow Joint - SAP 8823011",
+    "defectDescription": "Surface cracks around bend radius.",
+    "itemMarked": "yes",
+
+    "qualityRepName": "John Doe",
+    "additionalInfo": "Initial defect discovered during intake inspection.",
+
+    "engDate": "2025-01-05",
+    "engProcess": "SupRec",
+    "engCF": "Repair",
+    "engDrawingUpdate": "No",
+    "customerNotification": "No",
+    "customerNotificationInfo": "",
+    "originalRevNumber": "A0",
+    "updatedRevNumber": "A1",
+    "engineerName": "Emily Clark",
+    "engAdditionalInfo": "Minor machining required.",
+
+    "purchasingPrelimDecision": "Rework",
+    "carRaised": "no",
+    "carNumber": "",
+    "followUpRequired": "yes",
+    "followUpTypeDate": "Rework completion expected Jan 20",
+    "reInspectAcceptable": "yes",
+    "newNcrNumber": "",
+    "ncrClosed": "no",
+
+    "operationsManagerName": "Sarah Williams",
+    "inspectorName": "Kevin Ross",
+    "qualityDeptManagerName": "Linda Brown",
+    "opsAdditionalInfo": ""
   },
   {
-    "ncrNumber": "2025-002",
-    "createdOn": "2025-01-12",
+    "ncrNumber": "250207-112233-02",
+    "createdOn": "2025-02-07",
+    "status": "Closed",
+
+    "prodNumber": "2002",
+    "salesNumber": "5002",
+    "quantityReceived": "15",
+    "quantityDefective": "1",
+
+    "process": "WIP",
     "supplier": "Ontario Steelworks",
-    "status": "Closed"
+
+    "itemDescription": "Steel Mount Plate - SAP 7712399",
+    "defectDescription": "Incorrect hole spacing.",
+    "itemMarked": "no",
+
+    "qualityRepName": "Jane Smith",
+    "additionalInfo": "",
+
+    "engDate": "2025-02-07",
+    "engProcess": "scrapIPA",
+    "engCF": "Scrap",
+    "engDrawingUpdate": "No",
+    "customerNotification": "No",
+    "customerNotificationInfo": "",
+    "originalRevNumber": "B2",
+    "updatedRevNumber": "B2",
+    "engineerName": "Alan Murphy",
+    "engAdditionalInfo": "",
+
+    "purchasingPrelimDecision": "ScrapIH",
+    "carRaised": "yes",
+    "carNumber": "CAR-2025-020",
+    "followUpRequired": "no",
+    "followUpTypeDate": "",
+    "reInspectAcceptable": "no",
+    "newNcrNumber": "",
+    "ncrClosed": "yes",
+
+    "operationsManagerName": "Chris Moore",
+    "inspectorName": "Adam Lee",
+    "qualityDeptManagerName": "Felicia Clarke",
+    "opsAdditionalInfo": "Scrapped per SOP."
   },
   {
-    "ncrNumber": "2025-003",
-    "createdOn": "2025-01-18",
-    "supplier": "Maple Plastics Ltd.",
-    "status": "Active"
-  },
-  {
-    "ncrNumber": "2025-004",
-    "createdOn": "2025-01-22",
-    "supplier": "GreenTech Supplies",
-    "status": "Closed"
-  },
-  {
-    "ncrNumber": "2025-005",
-    "createdOn": "2025-01-28",
-    "supplier": "Hamilton Parts Co.",
-    "status": "Active"
-  },
-  {
-    "ncrNumber": "2025-006",
-    "createdOn": "2025-02-04",
-    "supplier": "Niagara College",
-    "status": "Closed"
-  },
-  {
-    "ncrNumber": "2025-007",
-    "createdOn": "2025-02-10",
-    "supplier": "Ontario Steelworks",
-    "status": "Active"
-  },
-  {
-    "ncrNumber": "2025-008",
-    "createdOn": "2025-02-16",
-    "supplier": "Maple Plastics Ltd.",
-    "status": "Closed"
-  },
-  {
-    "ncrNumber": "2025-009",
-    "createdOn": "2025-02-21",
-    "supplier": "GreenTech Supplies",
-    "status": "Active"
-  },
-  {
-    "ncrNumber": "2025-010",
-    "createdOn": "2025-02-27",
-    "supplier": "Hamilton Parts Co.",
-    "status": "Closed"
-  },
-  {
-    "ncrNumber": "2025-011",
-    "createdOn": "2025-03-03",
-    "supplier": "Niagara College",
-    "status": "Active"
-  },
-  {
-    "ncrNumber": "2025-012",
-    "createdOn": "2025-03-10",
-    "supplier": "Ontario Steelworks",
-    "status": "Closed"
-  },
-  {
-    "ncrNumber": "2025-013",
+    "ncrNumber": "250315-094410-03",
     "createdOn": "2025-03-15",
+    "status": "Active",
+
+    "prodNumber": "3003",
+    "salesNumber": "5003",
+    "quantityReceived": "100",
+    "quantityDefective": "8",
+
+    "process": "SupRec",
     "supplier": "Maple Plastics Ltd.",
-    "status": "Active"
+
+    "itemDescription": "Lexan sheet panel - SAP 5531200",
+    "defectDescription": "Multiple scratches due to improper packaging.",
+    "itemMarked": "yes",
+
+    "qualityRepName": "Alex Turner",
+    "additionalInfo": "Supplier notified.",
+
+    "engDate": "2025-03-15",
+    "engProcess": "SupRec",
+    "engCF": "Use",
+    "engDrawingUpdate": "No",
+    "customerNotification": "Yes",
+    "customerNotificationInfo": "Customer approved continued use.",
+    "originalRevNumber": "C1",
+    "updatedRevNumber": "C1",
+    "engineerName": "Michelle Evans",
+    "engAdditionalInfo": "",
+
+    "purchasingPrelimDecision": "Defer",
+    "carRaised": "no",
+    "carNumber": "",
+    "followUpRequired": "yes",
+    "followUpTypeDate": "Engineering meeting April 5",
+    "reInspectAcceptable": "yes",
+    "newNcrNumber": "",
+    "ncrClosed": "no",
+
+    "operationsManagerName": "Mark Davis",
+    "inspectorName": "Olivia Peters",
+    "qualityDeptManagerName": "Henry Park",
+    "opsAdditionalInfo": ""
   },
   {
-    "ncrNumber": "2025-014",
-    "createdOn": "2025-03-20",
-    "supplier": "GreenTech Supplies",
-    "status": "Closed"
+    "ncrNumber": "250420-141522-04",
+    "createdOn": "2025-04-20",
+    "status": "Active",
+
+    "prodNumber": "4004",
+    "salesNumber": "5004",
+    "quantityReceived": "60",
+    "quantityDefective": "6",
+
+    "process": "WIP",
+    "supplier": "Hamilton Metals",
+
+    "itemDescription": "Aluminum bracket - SAP 8892012",
+    "defectDescription": "Bent during machining.",
+    "itemMarked": "yes",
+
+    "qualityRepName": "Emily Harris",
+    "additionalInfo": "Production line halted for inspection.",
+
+    "engDate": "2025-04-20",
+    "engProcess": "SupRec",
+    "engCF": "Rework",
+    "engDrawingUpdate": "No",
+    "customerNotification": "No",
+    "customerNotificationInfo": "",
+    "originalRevNumber": "D0",
+    "updatedRevNumber": "D1",
+    "engineerName": "Sam Roberts",
+    "engAdditionalInfo": "",
+
+    "purchasingPrelimDecision": "Rework",
+    "carRaised": "no",
+    "carNumber": "",
+    "followUpRequired": "yes",
+    "followUpTypeDate": "Re-inspection scheduled April 30",
+    "reInspectAcceptable": "yes",
+    "newNcrNumber": "",
+    "ncrClosed": "no",
+
+    "operationsManagerName": "Sarah Williams",
+    "inspectorName": "Paul Ortiz",
+    "qualityDeptManagerName": "Linda Carter",
+    "opsAdditionalInfo": "Monitoring ongoing."
   },
   {
-    "ncrNumber": "2025-015",
-    "createdOn": "2025-03-25",
-    "supplier": "Hamilton Parts Co.",
-    "status": "Active"
+    "ncrNumber": "250505-163355-05",
+    "createdOn": "2025-05-05",
+    "status": "Closed",
+
+    "prodNumber": "5005",
+    "salesNumber": "5005",
+    "quantityReceived": "25",
+    "quantityDefective": "2",
+
+    "process": "SupRec",
+    "supplier": "Golden Fasteners Inc.",
+
+    "itemDescription": "M8 stainless bolt - SAP 6672012",
+    "defectDescription": "Thread damage on multiple units.",
+    "itemMarked": "no",
+
+    "qualityRepName": "Chris Walker",
+    "additionalInfo": "",
+
+    "engDate": "2025-05-05",
+    "engProcess": "SupRec",
+    "engCF": "Use",
+    "engDrawingUpdate": "No",
+    "customerNotification": "No",
+    "customerNotificationInfo": "",
+    "originalRevNumber": "E2",
+    "updatedRevNumber": "E2",
+    "engineerName": "Nina Patel",
+    "engAdditionalInfo": "",
+
+    "purchasingPrelimDecision": "Return",
+    "carRaised": "no",
+    "carNumber": "",
+    "followUpRequired": "no",
+    "followUpTypeDate": "",
+    "reInspectAcceptable": "yes",
+    "newNcrNumber": "",
+    "ncrClosed": "yes",
+
+    "operationsManagerName": "Mark Davis",
+    "inspectorName": "Aiden Brooks",
+    "qualityDeptManagerName": "Felicia Clarke",
+    "opsAdditionalInfo": ""
   },
   {
-    "ncrNumber": "2025-016",
-    "createdOn": "2025-03-30",
-    "supplier": "Niagara College",
-    "status": "Closed"
+    "ncrNumber": "250618-090045-06",
+    "createdOn": "2025-06-18",
+    "status": "Active",
+
+    "prodNumber": "6006",
+    "salesNumber": "5006",
+    "quantityReceived": "80",
+    "quantityDefective": "7",
+
+    "process": "WIP",
+    "supplier": "Superior Components",
+
+    "itemDescription": "Precision gear wheel - SAP 5539021",
+    "defectDescription": "Incorrect bore diameter.",
+    "itemMarked": "yes",
+
+    "qualityRepName": "Alex Turner",
+    "additionalInfo": "Line 2 affected.",
+
+    "engDate": "2025-06-18",
+    "engProcess": "SupRec",
+    "engCF": "Repair",
+    "engDrawingUpdate": "Yes",
+    "customerNotification": "Yes",
+    "customerNotificationInfo": "Revision discussed with OEM.",
+    "originalRevNumber": "F1",
+    "updatedRevNumber": "F2",
+    "engineerName": "Emily Grant",
+    "engAdditionalInfo": "New dimensions confirmed.",
+
+    "purchasingPrelimDecision": "Rework",
+    "carRaised": "yes",
+    "carNumber": "CAR-2025-052",
+    "followUpRequired": "yes",
+    "followUpTypeDate": "Supplier visit planned July 1",
+    "reInspectAcceptable": "no",
+    "newNcrNumber": "250701-124455-20",
+    "ncrClosed": "no",
+
+    "operationsManagerName": "Sarah Williams",
+    "inspectorName": "David Kim",
+    "qualityDeptManagerName": "Henry Park",
+    "opsAdditionalInfo": ""
   },
   {
-    "ncrNumber": "2025-017",
-    "createdOn": "2025-04-04",
-    "supplier": "Ontario Steelworks",
-    "status": "Active"
+    "ncrNumber": "250721-111233-07",
+    "createdOn": "2025-07-21",
+    "status": "Closed",
+
+    "prodNumber": "7007",
+    "salesNumber": "5007",
+    "quantityReceived": "12",
+    "quantityDefective": "1",
+
+    "process": "SupRec",
+    "supplier": "Redwood Electronics",
+
+    "itemDescription": "Circuit board assembly - SAP 1193221",
+    "defectDescription": "Cold solder joint on pin 6.",
+    "itemMarked": "yes",
+
+    "qualityRepName": "John Doe",
+    "additionalInfo": "",
+
+    "engDate": "2025-07-21",
+    "engProcess": "SupRec",
+    "engCF": "Use",
+    "engDrawingUpdate": "No",
+    "customerNotification": "No",
+    "customerNotificationInfo": "",
+    "originalRevNumber": "G3",
+    "updatedRevNumber": "G3",
+    "engineerName": "Michael Johnson",
+    "engAdditionalInfo": "",
+
+    "purchasingPrelimDecision": "Return",
+    "carRaised": "no",
+    "carNumber": "",
+    "followUpRequired": "no",
+    "followUpTypeDate": "",
+    "reInspectAcceptable": "yes",
+    "newNcrNumber": "",
+    "ncrClosed": "yes",
+
+    "operationsManagerName": "Chris Moore",
+    "inspectorName": "Mark Rivera",
+    "qualityDeptManagerName": "Linda Carter",
+    "opsAdditionalInfo": ""
   },
   {
-    "ncrNumber": "2025-018",
-    "createdOn": "2025-04-09",
-    "supplier": "Maple Plastics Ltd.",
-    "status": "Closed"
+    "ncrNumber": "250830-145930-08",
+    "createdOn": "2025-08-30",
+    "status": "Active",
+
+    "prodNumber": "8008",
+    "salesNumber": "5008",
+    "quantityReceived": "45",
+    "quantityDefective": "4",
+
+    "process": "WIP",
+    "supplier": "Starlight Fabrication",
+
+    "itemDescription": "Sheet metal chassis - SAP 4490221",
+    "defectDescription": "Warped from overheating.",
+    "itemMarked": "yes",
+
+    "qualityRepName": "Jane Smith",
+    "additionalInfo": "Requires investigation.",
+
+    "engDate": "2025-08-30",
+    "engProcess": "SupRec",
+    "engCF": "Rework",
+    "engDrawingUpdate": "No",
+    "customerNotification": "Yes",
+    "customerNotificationInfo": "Customer aware of heat distortion concerns.",
+    "originalRevNumber": "H1",
+    "updatedRevNumber": "H2",
+    "engineerName": "Luke Patterson",
+    "engAdditionalInfo": "Metal fatigue checked.",
+
+    "purchasingPrelimDecision": "Defer",
+    "carRaised": "no",
+    "carNumber": "",
+    "followUpRequired": "yes",
+    "followUpTypeDate": "Heat treatment review Sept 10",
+    "reInspectAcceptable": "yes",
+    "newNcrNumber": "",
+    "ncrClosed": "no",
+
+    "operationsManagerName": "Mark Davis",
+    "inspectorName": "Grace Young",
+    "qualityDeptManagerName": "Felicia Clarke",
+    "opsAdditionalInfo": ""
   },
   {
-    "ncrNumber": "2025-019",
-    "createdOn": "2025-04-14",
-    "supplier": "GreenTech Supplies",
-    "status": "Active"
+    "ncrNumber": "250915-101820-09",
+    "createdOn": "2025-09-15",
+    "status": "Active",
+
+    "prodNumber": "9009",
+    "salesNumber": "5009",
+    "quantityReceived": "200",
+    "quantityDefective": "18",
+
+    "process": "SupRec",
+    "supplier": "Titan Fasteners",
+
+    "itemDescription": "Stainless washers - SAP 8892201",
+    "defectDescription": "Incorrect outer diameter.",
+    "itemMarked": "no",
+
+    "qualityRepName": "Emily Harris",
+    "additionalInfo": "",
+
+    "engDate": "2025-09-15",
+    "engProcess": "SupRec",
+    "engCF": "Scrap",
+    "engDrawingUpdate": "No",
+    "customerNotification": "No",
+    "customerNotificationInfo": "",
+    "originalRevNumber": "I0",
+    "updatedRevNumber": "I0",
+    "engineerName": "Sam Roberts",
+    "engAdditionalInfo": "",
+
+    "purchasingPrelimDecision": "Return",
+    "carRaised": "yes",
+    "carNumber": "CAR-2025-091",
+    "followUpRequired": "no",
+    "followUpTypeDate": "",
+    "reInspectAcceptable": "no",
+    "newNcrNumber": "",
+    "ncrClosed": "no",
+
+    "operationsManagerName": "Chris Moore",
+    "inspectorName": "Lucas Perry",
+    "qualityDeptManagerName": "Henry Park",
+    "opsAdditionalInfo": ""
   },
   {
-    "ncrNumber": "2025-020",
-    "createdOn": "2025-04-19",
-    "supplier": "Hamilton Parts Co.",
-    "status": "Closed"
+    "ncrNumber": "251210-084455-10",
+    "createdOn": "2025-12-10",
+    "status": "Closed",
+
+    "prodNumber": "1010",
+    "salesNumber": "5010",
+    "quantityReceived": "75",
+    "quantityDefective": "5",
+
+    "process": "WIP",
+    "supplier": "Evergreen CNC",
+
+    "itemDescription": "CNC machined block - SAP 9982012",
+    "defectDescription": "Incorrect chamfer size.",
+    "itemMarked": "yes",
+
+    "qualityRepName": "John Doe",
+    "additionalInfo": "Final NCR before year-end.",
+
+    "engDate": "2025-12-10",
+    "engProcess": "SupRec",
+    "engCF": "Repair",
+    "engDrawingUpdate": "Yes",
+    "customerNotification": "Yes",
+    "customerNotificationInfo": "Customer approved change to chamfer spec.",
+    "originalRevNumber": "J2",
+    "updatedRevNumber": "J3",
+    "engineerName": "Michael Johnson",
+    "engAdditionalInfo": "Updated CAD uploaded.",
+
+    "purchasingPrelimDecision": "Rework",
+    "carRaised": "no",
+    "carNumber": "",
+    "followUpRequired": "yes",
+    "followUpTypeDate": "Rework completion expected Dec 20",
+    "reInspectAcceptable": "yes",
+    "newNcrNumber": "",
+    "ncrClosed": "yes",
+
+    "operationsManagerName": "Sarah Williams",
+    "inspectorName": "Oliver Chen",
+    "qualityDeptManagerName": "Linda Carter",
+    "opsAdditionalInfo": ""
   }
 ]

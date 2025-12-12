@@ -4,49 +4,34 @@
   <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Crossfire</title>
+    <title>Crossfire Dashboard</title>
     <link rel="stylesheet" href="style.css">
-    <link rel="stylesheet"
-      href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.css">
+    <script src="/script/main.js"></script>
   </head>
 
   <body>
     <div class="container">
 
-      <!-- Sidebar -->
-      <aside class="sidebar padding">
-        <div>
-          <div class="logo"><img src="assets/Crossfire Logo-transparent.png" alt="Crossfire" width="206"></div>
-          <hr />
-          <nav>
-            <ul>
-              <li><i class="bi bi-grid"></i><a href="home.html">Dashboard</a></li>
+        <!-- Quick Access Menu -->
+        <aside class="sidebar padding">
+            <div>
+                <div class="logo"><img src="assets/Crossfire Logo-transparent.png" alt="Crossfire" width="206"></div>
+                <hr />
+                <nav>
+                    <ul>
+                        <li><i class="bi bi-grid"></i><a href="home.html">Dashboard</a></li>
                         <li><i class="bi bi-bar-chart"></i><a href="all-ncrs.html" class="active">View NCRs</a></li>
                         <li><i class="bi bi-pencil"></i><a href="create-ncr.html">Create NCR</a></li>
-                        <li><i class="bi bi-gear"></i><a href="/">Log out</a></li>
                         <hr/>
                         <li><i class="bi bi-star"></i><a href="create-ncr.html">Quality Rep Portion</a></li>
                         <li><i class="bi bi-star"></i><a href="engineering-ncr.html">Engineering Portion</a></li>
-                        <li><i class="bi bi-star"></i><a href="/">Purchasing/Operations Portion</a></li>
-            </ul>
-          </nav>
-        </div>
-
-        <div class="theme-toggle padding">
-          <div class="mode">
-            <div>
-              <i class="bi bi-moon"></i>
-              <span id="theme-text"></span>
+                        <li><i class="bi bi-star"></i><a href="PO-ncr.html">Purchasing/Operations Portion</a></li>
+                    </ul>
+                </nav>
             </div>
-            <div>
-              <label class="switch">
-                <input type="checkbox" id="theme-switch">
-                <span class="slider"></span>
-              </label>
-            </div>
-          </div>
-        </div>
-      </aside>
+        </aside>
+        <!-- Quick Access Menu END -->
 
       <!-- Main -->
       <main class="main">
@@ -57,7 +42,7 @@
           </div>
           <div class="grid-end">
             <div class="flex">
-              <div class="notification-btn"><i class="bi bi-bell"></i></div>
+              <!--<div class="notification-btn"><i class="bi bi-bell"></i></div>-->
               <div class="user-info desktop"><span>John Doe</span></div>
               <div class="avatar-btn"><span>a</span></div>
             </div>
@@ -99,14 +84,6 @@
                   </tr>
                 </thead>
                 <tbody id="ncr-logs-table-home">
-                  <!-- <tr>
-                    <td>2025-001</td>
-                    <td>02-10-2025</td>
-                    <td>Niagara College</td>
-                    <td>Active</td>
-                    <td><a href="edit-ncr.html">View/Edit</a></td>
-                  </tr> -->
-
                 </tbody>
               </table>
             </section>
@@ -114,23 +91,13 @@
             <!-- Recent Activities  -->
             <section class="card recent-activity">
               <h3>Recent Activity</h3>
-              <p>NCR: 2025-004 was created on 03-10-2025</p>
-              <p>NCR: 2025-002 was closed on 03-10-2025</p>
-              <p>NCR: 2025-004 was created on 03-10-2025</p>
-              <p>NCR: 2025-004 was created on 03-10-2025</p>
-              <p>NCR: 2025-004 was created on 03-10-2025</p>
+              
             </section>
 
           </div>
         </section>
       </main>
     </div>
-
-    <!-- Scripts -->
-    <script src="https://code.jquery.com/jquery-3.7.1.js"
-      integrity="sha256-eKhayi8LEQwp4NKxN+CfCh+3qOVUtJn3QNZ0TciWLP4="
-      crossorigin="anonymous"></script>
-    <script src="/script/main.js"></script>
   </body>
 
 </html>
